@@ -1,0 +1,72 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : full_FIR
+Version: O-2018.06-SP4
+Date   : Tue Oct 13 09:57:54 2020
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: b3[1] (input port clocked by MY_CLK)
+  Endpoint: FIR/x_multed_reg[3][7]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  full_FIR           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 f
+  b3[1] (in)                                              0.00       0.50 f
+  FIR/b[3][1] (my_fir)                                    0.00       0.50 f
+  FIR/mult_42_G4/b[1] (my_fir_DW_mult_tc_3)               0.00       0.50 f
+  FIR/mult_42_G4/U171/ZN (INV_X1)                         0.04       0.54 r
+  FIR/mult_42_G4/U189/Z (XOR2_X1)                         0.08       0.63 r
+  FIR/mult_42_G4/U186/ZN (OAI22_X1)                       0.05       0.67 f
+  FIR/mult_42_G4/U37/S (HA_X1)                            0.08       0.75 f
+  FIR/mult_42_G4/U169/ZN (INV_X1)                         0.03       0.78 r
+  FIR/mult_42_G4/U199/ZN (OAI222_X1)                      0.06       0.84 f
+  FIR/mult_42_G4/U198/ZN (AOI222_X1)                      0.10       0.93 r
+  FIR/mult_42_G4/U158/ZN (INV_X1)                         0.03       0.96 f
+  FIR/mult_42_G4/U197/ZN (AOI222_X1)                      0.11       1.07 r
+  FIR/mult_42_G4/U196/ZN (OAI222_X1)                      0.07       1.13 f
+  FIR/mult_42_G4/U9/CO (FA_X1)                            0.10       1.23 f
+  FIR/mult_42_G4/U8/CO (FA_X1)                            0.09       1.32 f
+  FIR/mult_42_G4/U7/CO (FA_X1)                            0.09       1.41 f
+  FIR/mult_42_G4/U6/CO (FA_X1)                            0.09       1.50 f
+  FIR/mult_42_G4/U5/CO (FA_X1)                            0.09       1.59 f
+  FIR/mult_42_G4/U4/CO (FA_X1)                            0.09       1.68 f
+  FIR/mult_42_G4/U3/CO (FA_X1)                            0.09       1.77 f
+  FIR/mult_42_G4/U177/Z (XOR2_X1)                         0.07       1.84 f
+  FIR/mult_42_G4/U176/ZN (XNOR2_X1)                       0.06       1.90 f
+  FIR/mult_42_G4/product[14] (my_fir_DW_mult_tc_3)        0.00       1.90 f
+  FIR/U63/ZN (AOI22_X1)                                   0.06       1.96 r
+  FIR/U62/ZN (INV_X1)                                     0.02       1.98 f
+  FIR/x_multed_reg[3][7]/D (DFFR_X1)                      0.01       1.99 f
+  data arrival time                                                  1.99
+
+  clock MY_CLK (rise edge)                                8.00       8.00
+  clock network delay (ideal)                             0.00       8.00
+  clock uncertainty                                      -0.07       7.93
+  FIR/x_multed_reg[3][7]/CK (DFFR_X1)                     0.00       7.93 r
+  library setup time                                     -0.04       7.89
+  data required time                                                 7.89
+  --------------------------------------------------------------------------
+  data required time                                                 7.89
+  data arrival time                                                 -1.99
+  --------------------------------------------------------------------------
+  slack (MET)                                                        5.90
+
+
+1

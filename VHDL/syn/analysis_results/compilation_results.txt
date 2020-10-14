@@ -1,0 +1,107 @@
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.4 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.4 |     *     |
+============================================================================
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'control'
+  Processing 'my_fir'
+  Processing 'full_FIR'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'my_fir_DW01_add_0'
+  Processing 'my_fir_DW01_add_1'
+  Processing 'my_fir_DW01_add_2'
+  Processing 'my_fir_DW01_add_3'
+  Processing 'my_fir_DW01_add_4'
+  Processing 'my_fir_DW01_add_5'
+  Processing 'my_fir_DW01_add_6'
+  Processing 'my_fir_DW01_add_7'
+  Mapping 'my_fir_DW_mult_tc_0'
+  Mapping 'my_fir_DW_mult_tc_1'
+  Mapping 'my_fir_DW_mult_tc_2'
+  Mapping 'my_fir_DW_mult_tc_3'
+  Mapping 'my_fir_DW_mult_tc_4'
+  Mapping 'my_fir_DW_mult_tc_5'
+  Mapping 'my_fir_DW_mult_tc_6'
+  Mapping 'my_fir_DW_mult_tc_7'
+  Mapping 'my_fir_DW_mult_tc_8'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:22    3838.1      0.00       0.0       4.9                          
+    0:00:23    3838.1      0.00       0.0       4.9                          
+    0:00:23    3838.1      0.00       0.0       4.9                          
+    0:00:23    3838.1      0.00       0.0       4.9                          
+    0:00:23    3838.1      0.00       0.0       4.9                          
+    0:00:26    3540.2      0.00       0.0       0.0                          
+    0:00:26    3540.2      0.00       0.0       0.0                          
+    0:00:27    3540.2      0.00       0.0       0.0                          
+    0:00:27    3540.2      0.00       0.0       0.0                          
+    0:00:27    3540.2      0.00       0.0       0.0                          
+    0:00:27    3540.2      0.00       0.0       0.0                          
+    0:00:27    3540.2      0.00       0.0       0.0                          
+    0:00:27    3540.2      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:27    3540.2      0.00       0.0       0.0                          
+    0:00:27    3540.2      0.00       0.0       0.0                          
+    0:00:27    3540.2      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:27    3540.2      0.00       0.0       0.0                          
+    0:00:27    3540.2      0.00       0.0       0.0                          
+    0:00:29    3534.9      0.00       0.0       0.0                          
+    0:00:29    3530.1      0.00       0.0       0.0                          
+    0:00:29    3529.6      0.00       0.0       0.0                          
+    0:00:29    3529.0      0.00       0.0       0.0                          
+    0:00:29    3528.5      0.00       0.0       0.0                          
+    0:00:29    3528.5      0.00       0.0       0.0                          
+    0:00:30    3528.5      0.00       0.0       0.0                          
+    0:00:30    3528.5      0.00       0.0       0.0                          
+    0:00:30    3528.5      0.00       0.0       0.0                          
+    0:00:30    3528.5      0.00       0.0       0.0                          
+    0:00:30    3528.5      0.00       0.0       0.0                          
+    0:00:30    3528.5      0.00       0.0       0.0                          
+    0:00:30    3528.5      0.00       0.0       0.0                          
+Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1

@@ -1,0 +1,18 @@
+#!/bin/bash
+cd /home/isa37/Documents/lab1/VHDL/sim/
+vcom -93 -work ./work ../src/coeffs.vhd
+vcom -93 -work ./work ../src/pkg.vhd
+vcom -93 -work ./work ../src/control.vhd
+vcom -93 -work ./work ../src/full_FIR.vhd
+vcom -93 -work ./work ../src/my_fir.vhd
+
+vcom -93 -work ./work ../tb/clk_gen.vhd
+vcom -93 -work ./work ../tb/tb_output_data_checker.vhd
+vcom -93 -work ./work ../tb/tb_data_maker.vhd
+vcom -93 -work ./work ../tb/pkg.vhd
+
+
+vlog -work ./work ../tb/TB_FILTER.v
+
+vsim work.tb_fir
+

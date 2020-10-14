@@ -1,0 +1,74 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : full_FIR
+Version: O-2018.06-SP4
+Date   : Sun Oct 11 16:21:29 2020
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: b7[2] (input port clocked by MY_CLK)
+  Endpoint: FIR/x_multed_reg[7][7]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  full_FIR           5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 r
+  b7[2] (in)                                              0.00       0.50 r
+  FIR/b[7][2] (my_fir)                                    0.00       0.50 r
+  FIR/mult_42_G8/b[2] (my_fir_DW_mult_tc_7)               0.00       0.50 r
+  FIR/mult_42_G8/U281/ZN (XNOR2_X1)                       0.06       0.56 r
+  FIR/mult_42_G8/U280/ZN (OAI22_X1)                       0.04       0.60 f
+  FIR/mult_42_G8/U37/S (HA_X1)                            0.08       0.69 f
+  FIR/mult_42_G8/U196/ZN (INV_X1)                         0.03       0.72 r
+  FIR/mult_42_G8/U219/ZN (OAI222_X1)                      0.06       0.78 f
+  FIR/mult_42_G8/U218/ZN (AOI222_X1)                      0.10       0.87 r
+  FIR/mult_42_G8/U197/ZN (INV_X1)                         0.03       0.90 f
+  FIR/mult_42_G8/U217/ZN (AOI222_X1)                      0.11       1.01 r
+  FIR/mult_42_G8/U216/ZN (OAI222_X1)                      0.07       1.07 f
+  FIR/mult_42_G8/U9/CO (FA_X1)                            0.10       1.17 f
+  FIR/mult_42_G8/U8/CO (FA_X1)                            0.09       1.26 f
+  FIR/mult_42_G8/U7/CO (FA_X1)                            0.10       1.36 f
+  FIR/mult_42_G8/U175/ZN (NAND2_X1)                       0.03       1.39 r
+  FIR/mult_42_G8/U177/ZN (NAND3_X1)                       0.05       1.44 f
+  FIR/mult_42_G8/U182/ZN (NAND2_X1)                       0.04       1.47 r
+  FIR/mult_42_G8/U184/ZN (NAND3_X1)                       0.04       1.52 f
+  FIR/mult_42_G8/U189/ZN (NAND2_X1)                       0.03       1.55 r
+  FIR/mult_42_G8/U191/ZN (NAND3_X1)                       0.04       1.59 f
+  FIR/mult_42_G8/U3/CO (FA_X1)                            0.09       1.68 f
+  FIR/mult_42_G8/U199/Z (XOR2_X1)                         0.07       1.75 f
+  FIR/mult_42_G8/U198/ZN (XNOR2_X1)                       0.06       1.80 f
+  FIR/mult_42_G8/product[14] (my_fir_DW_mult_tc_7)        0.00       1.80 f
+  FIR/U336/ZN (AOI22_X1)                                  0.06       1.86 r
+  FIR/U326/ZN (INV_X1)                                    0.02       1.88 f
+  FIR/x_multed_reg[7][7]/D (DFFR_X1)                      0.01       1.89 f
+  data arrival time                                                  1.89
+
+  clock MY_CLK (rise edge)                                2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.07       1.93
+  FIR/x_multed_reg[7][7]/CK (DFFR_X1)                     0.00       1.93 r
+  library setup time                                     -0.04       1.89
+  data required time                                                 1.89
+  --------------------------------------------------------------------------
+  data required time                                                 1.89
+  data arrival time                                                 -1.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

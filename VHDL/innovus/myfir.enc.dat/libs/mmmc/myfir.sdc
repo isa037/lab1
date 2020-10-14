@@ -1,0 +1,1 @@
+/home/isa37/Documents/lab1/VHDL/netlist/myfir.sdc
