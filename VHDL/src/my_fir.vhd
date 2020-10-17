@@ -24,7 +24,7 @@ architecture behavioural of my_fir is
 	type mult_type is array (0 to 8) of signed (15 downto 0);
 	signal x_mult_long: mult_type;
 	signal x_int : internal_type;
-	signal x_mult, x_multed : reg8_type;
+	signal x_mult : reg8_type;
 	signal x_sum: sum_type;
 	--signal x_sum_tmp: sum_tmp_type;
 	signal DOUT_tmp : signed(7 downto 0);
@@ -49,11 +49,11 @@ begin
 	
 	--Somme
 		
-	x_sum(0)<=x_multed(1)+x_multed(0);
+	x_sum(0)<=x_mult(1)+x_mult(0);
 		
 	somme: for I in 1 to 7 generate
 	begin
-		x_sum(I)<=x_sum(I-1)+x_multed(I+1);
+		x_sum(I)<=x_sum(I-1)+x_mult(I+1);
 	end generate;
 	
 
@@ -69,20 +69,7 @@ begin
 			end if;
 	end if;
 	end process;
-	
-	
-	mult_saving: process(clk)
-	begin
-	if (reg_rst='0')then
-		x_multed(0 to 8)<= (others=>"000000000");
-		elsif (clk'event and clk='1') then
-			if (EN_IN_REG='1') then
-				x_multed(0 to 8)<= x_mult(0 to 8);
-			else
-		        x_multed(0 to 8)<=x_multed(0 to 8);
-	        end if;
-	end if;		
-	end process;
+
 
 	loading: process(clk)
 	begin
