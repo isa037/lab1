@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/isa37/Documents/lab1/VHDL/sim/
+cd /home/isa37/git/lab1/VHDL/sim/
 source /software/scripts/init_msim6.2g
 rm -r work
 vlib work
