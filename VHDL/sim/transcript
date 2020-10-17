@@ -8,32 +8,32 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -L /software/dk/nangate45/verilog/msim6.2g work.tb_fir 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# vsim -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_fir/UUT=../netlist/myfir.sdf work.tb_fir 
+# ** Note: (vsim-3812) Design is being optimized...
 # Loading work.tb_fir(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.CLKBUF_X2(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.OAI21_X1(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.AOI21_X1(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.CLKBUF_X3(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X1(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.AOI22_X1(fast)
+# Loading work.full_FIR(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.CLKBUF_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.INV_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI22_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.NAND2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.OAI21_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.OAI22_X1(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.INV_X2(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.DFFR_X1(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.XOR2_X1(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.AND2_X1(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.FA_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.XNOR2_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.XOR2_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.NAND3_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.OR3_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.NOR2_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.MUX2_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.NOR3_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AOI21_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.OAI222_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.AOI222_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.HA_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.FA_X1(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.AND2_X1(fast)
+# Loading instances from ../netlist/myfir.sdf
 # Loading /software/mentor/modelsim_6.2g/linux/../std.standard
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
@@ -43,291 +43,305 @@
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
 # Loading work.tb_input_data_maker(beh)
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3152): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(805): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_8__0_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3156): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(807): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_7__0_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3160): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(809): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_6__0_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3164): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(811): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_5__0_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3168): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(813): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_4__0_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3172): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(815): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_3__0_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3186): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(821): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_0__0_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3190): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(823): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_8__1_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3194): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(825): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_7__1_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3198): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(827): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_6__1_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3202): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(829): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_5__1_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3206): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(831): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_4__1_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3210): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(833): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_3__1_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3224): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(839): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_0__1_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3228): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(841): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_8__2_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3232): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(843): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_7__2_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3236): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(845): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_6__2_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3240): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(847): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_5__2_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3244): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(849): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_4__2_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3248): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(851): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_3__2_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3262): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(857): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_0__2_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3266): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(859): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_8__3_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3270): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(861): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_7__3_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3274): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(863): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_6__3_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3278): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(865): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_5__3_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3282): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(867): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_4__3_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3286): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(869): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_3__3_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3300): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(875): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_0__3_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3304): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(877): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_8__4_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3308): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(879): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_7__4_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3312): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(881): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_6__4_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3316): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(883): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_5__4_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3320): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(885): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_4__4_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3324): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(887): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_3__4_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3338): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(893): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_0__4_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3342): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(895): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_8__5_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3346): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(897): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_7__5_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3350): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(899): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_6__5_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3354): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(901): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_5__5_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3358): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(903): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_4__5_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3362): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(905): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_3__5_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3376): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(911): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_0__5_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3380): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(913): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_8__6_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3384): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(915): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_7__6_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3388): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(917): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_6__6_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3392): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(919): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_5__6_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3396): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(921): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_4__6_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3400): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(923): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_3__6_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3414): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(929): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_0__6_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3418): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(931): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_8__7_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3422): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(933): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_7__7_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3426): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(935): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_6__7_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3430): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(937): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_5__7_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3434): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(939): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_4__7_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3438): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(941): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_3__7_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3452): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(947): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_x_int_reg_0__7_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3456): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_8__0_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3460): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_8__1_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3464): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_8__2_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3468): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_8__3_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3472): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_8__4_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3476): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_8__5_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3480): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_8__6_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3484): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_8__7_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3488): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_7__0_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3492): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_7__1_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3496): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_7__2_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3500): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_7__3_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3504): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_7__4_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3508): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_7__5_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3512): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_7__6_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3516): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_7__7_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3520): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_6__0_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3524): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_6__1_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3528): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_6__2_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3532): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_6__3_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3536): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_6__4_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3540): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_6__5_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3544): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_6__6_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3548): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_6__7_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3552): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_5__0_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3556): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_5__1_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3560): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_5__2_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3564): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_5__3_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3568): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_5__4_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3572): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_5__5_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3576): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_5__6_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3580): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_5__7_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3584): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_4__0_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3588): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_4__1_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3592): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_4__2_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3596): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_4__3_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3600): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_4__4_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3604): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_4__5_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3608): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_4__6_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3612): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_4__7_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3616): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_3__0_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3620): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_3__1_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3624): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_3__2_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3628): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_3__3_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3632): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_3__4_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3636): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_3__5_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3640): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_3__6_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3644): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_3__7_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3648): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_2__0_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3652): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_2__1_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3656): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_2__2_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3660): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_2__3_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3664): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_2__4_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3668): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_2__5_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3672): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_2__6_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3676): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_2__7_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3680): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_1__0_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3684): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_1__1_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3688): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_1__2_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3692): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_1__3_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3696): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_1__4_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3700): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_1__5_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3704): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_1__6_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3708): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_1__7_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3712): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_0__0_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3716): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_0__1_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3720): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_0__2_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3724): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_0__3_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3728): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_0__4_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3732): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_0__5_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3736): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_0__6_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3740): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/FIR_x_multed_reg_0__7_
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3780): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(3796): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_add_5_root_add_0_root_add_56_G7_U1_7
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3820): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(3827): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_add_4_root_add_0_root_add_56_G7_U1_7
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3860): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(3857): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_add_3_root_add_0_root_add_56_G7_U1_7
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3900): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(3888): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_add_6_root_add_0_root_add_56_G7_U1_7
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3940): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(3919): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_add_7_root_add_0_root_add_56_G7_U1_7
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(3980): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(3949): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_add_2_root_add_0_root_add_56_G7_U1_7
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(4020): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(3979): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_add_1_root_add_0_root_add_56_G7_U1_7
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(4060): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(4009): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/FIR_add_0_root_add_0_root_add_56_G7_U1_7
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(8529): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(4011): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/controllo_VOUT_tmp_reg
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(8533): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /tb_fir/UUT/controllo_EN_OUT_tmp_reg
-# ** Warning: (vsim-3017) ../innovus/full_FIR.v(8537): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/myfir.v(4013): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /tb_fir/UUT/controllo_EN_IN_REG_tmp_reg
 # Loading work.tb_output_data_checker(beh)
-do /home/isa37/Documents/lab1/VHDL/sim/wave.do
-vcd file ../vcd/design.vcd
-
-#Then, we specify that we want to monitor all the signals inside our unit-under-test (the FIR filter):
-vcd add /tb_fir/UUT/*
-
-#run simulation
+# Loading timing data from ../netlist/myfir.sdf
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/controllo_EN_IN_REG_tmp_reg
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/controllo_VOUT_tmp_reg
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_0__7_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_1__7_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_2__7_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_3__7_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_4__7_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_5__7_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_6__7_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_7__7_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_8__7_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_0__6_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_1__6_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_2__6_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_3__6_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_4__6_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_5__6_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_6__6_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_7__6_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_8__6_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_0__5_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_1__5_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_2__5_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_3__5_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_4__5_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_5__5_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_6__5_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_7__5_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_8__5_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_0__4_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_1__4_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_2__4_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_3__4_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_4__4_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_5__4_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_6__4_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_7__4_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_8__4_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_0__3_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_1__3_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_2__3_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_3__3_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_4__3_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_5__3_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_6__3_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_7__3_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_8__3_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_0__2_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_1__2_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_2__2_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_3__2_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_4__2_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_5__2_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_6__2_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_7__2_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_8__2_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_0__1_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_1__1_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_2__1_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_3__1_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_4__1_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_5__1_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_6__1_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_7__1_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_8__1_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_0__0_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_1__0_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_2__0_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_3__0_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_4__0_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_5__0_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_6__0_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_7__0_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_x_int_reg_8__0_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_DOUT_tmp_reg_7_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_DOUT_tmp_reg_6_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_DOUT_tmp_reg_5_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_DOUT_tmp_reg_4_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_DOUT_tmp_reg_3_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_DOUT_tmp_reg_2_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_DOUT_tmp_reg_1_
+# ** Warning: (vsim-3448) nofile(1758): Setting negative specify check constraint (0 ns) to zero.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_DOUT_tmp_reg_0_
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ns  Iteration: 0  Region: /tb_fir  File: ../tb/TB_FILTER.v
 run 5 us
-
+quit

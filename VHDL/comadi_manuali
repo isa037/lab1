@@ -1,10 +1,10 @@
 #ambiente modelsim
 source /software/scripts/init_msim6.2g
 #ambiente synopsis
-cd /home/isa37/Documents/lab1/VHDL/syn
+cd /home/isa37/git/lab1/VHDL/syn
 source /software/scripts/init_synopsys_64.18
 #lancia synopsis
 dc_shell-xg-t
 #ambiente innovus
-cd /home/isa37/Documents/lab1/VHDL/innovus
+cd /home/isa37/git/lab1/VHDL/innovus
 source /software/scripts/init_innovus17.11

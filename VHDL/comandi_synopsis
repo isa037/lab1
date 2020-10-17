@@ -1,5 +1,6 @@
 #!/bin/bash
 cd /home/isa37/Documents/lab1/VHDL/syn/
+rm -r work
 mkdir work
 mkdir analysis_results
 #*******Reading VHDL source files**************

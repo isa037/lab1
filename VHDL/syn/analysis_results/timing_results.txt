@@ -7,14 +7,14 @@ Report : timing
         -max_paths 1
 Design : full_FIR
 Version: O-2018.06-SP4
-Date   : Tue Oct 13 09:57:54 2020
+Date   : Sat Oct 17 18:04:47 2020
 ****************************************
 
 Operating Conditions: typical   Library: NangateOpenCellLibrary
 Wire Load Model Mode: top
 
   Startpoint: b3[1] (input port clocked by MY_CLK)
-  Endpoint: FIR/x_multed_reg[3][7]
+  Endpoint: FIR/DOUT_tmp_reg[7]
             (rising edge-triggered flip-flop clocked by MY_CLK)
   Path Group: MY_CLK
   Path Type: max
@@ -31,11 +31,11 @@ Wire Load Model Mode: top
   b3[1] (in)                                              0.00       0.50 f
   FIR/b[3][1] (my_fir)                                    0.00       0.50 f
   FIR/mult_42_G4/b[1] (my_fir_DW_mult_tc_3)               0.00       0.50 f
-  FIR/mult_42_G4/U171/ZN (INV_X1)                         0.04       0.54 r
+  FIR/mult_42_G4/U174/ZN (INV_X1)                         0.04       0.54 r
   FIR/mult_42_G4/U189/Z (XOR2_X1)                         0.08       0.63 r
   FIR/mult_42_G4/U186/ZN (OAI22_X1)                       0.05       0.67 f
   FIR/mult_42_G4/U37/S (HA_X1)                            0.08       0.75 f
-  FIR/mult_42_G4/U169/ZN (INV_X1)                         0.03       0.78 r
+  FIR/mult_42_G4/U175/ZN (INV_X1)                         0.03       0.78 r
   FIR/mult_42_G4/U199/ZN (OAI222_X1)                      0.06       0.84 f
   FIR/mult_42_G4/U198/ZN (AOI222_X1)                      0.10       0.93 r
   FIR/mult_42_G4/U158/ZN (INV_X1)                         0.03       0.96 f
@@ -51,22 +51,42 @@ Wire Load Model Mode: top
   FIR/mult_42_G4/U177/Z (XOR2_X1)                         0.07       1.84 f
   FIR/mult_42_G4/U176/ZN (XNOR2_X1)                       0.06       1.90 f
   FIR/mult_42_G4/product[14] (my_fir_DW_mult_tc_3)        0.00       1.90 f
-  FIR/U63/ZN (AOI22_X1)                                   0.06       1.96 r
-  FIR/U62/ZN (INV_X1)                                     0.02       1.98 f
-  FIR/x_multed_reg[3][7]/D (DFFR_X1)                      0.01       1.99 f
-  data arrival time                                                  1.99
+  FIR/add_7_root_add_0_root_add_56_G7/A[7] (my_fir_DW01_add_3)
+                                                          0.00       1.90 f
+  FIR/add_7_root_add_0_root_add_56_G7/U1_7/S (FA_X1)      0.13       2.03 f
+  FIR/add_7_root_add_0_root_add_56_G7/SUM[7] (my_fir_DW01_add_3)
+                                                          0.00       2.03 f
+  FIR/add_2_root_add_0_root_add_56_G7/B[7] (my_fir_DW01_add_2)
+                                                          0.00       2.03 f
+  FIR/add_2_root_add_0_root_add_56_G7/U1_7/S (FA_X1)      0.15       2.18 r
+  FIR/add_2_root_add_0_root_add_56_G7/SUM[7] (my_fir_DW01_add_2)
+                                                          0.00       2.18 r
+  FIR/add_1_root_add_0_root_add_56_G7/B[7] (my_fir_DW01_add_1)
+                                                          0.00       2.18 r
+  FIR/add_1_root_add_0_root_add_56_G7/U1_7/S (FA_X1)      0.12       2.31 f
+  FIR/add_1_root_add_0_root_add_56_G7/SUM[7] (my_fir_DW01_add_1)
+                                                          0.00       2.31 f
+  FIR/add_0_root_add_0_root_add_56_G7/B[7] (my_fir_DW01_add_0)
+                                                          0.00       2.31 f
+  FIR/add_0_root_add_0_root_add_56_G7/U1_7/S (FA_X1)      0.15       2.45 r
+  FIR/add_0_root_add_0_root_add_56_G7/SUM[7] (my_fir_DW01_add_0)
+                                                          0.00       2.45 r
+  FIR/U35/ZN (NAND2_X1)                                   0.03       2.48 f
+  FIR/U34/ZN (OAI21_X1)                                   0.03       2.51 r
+  FIR/DOUT_tmp_reg[7]/D (DFFR_X1)                         0.01       2.52 r
+  data arrival time                                                  2.52
 
-  clock MY_CLK (rise edge)                                8.00       8.00
-  clock network delay (ideal)                             0.00       8.00
-  clock uncertainty                                      -0.07       7.93
-  FIR/x_multed_reg[3][7]/CK (DFFR_X1)                     0.00       7.93 r
-  library setup time                                     -0.04       7.89
-  data required time                                                 7.89
+  clock MY_CLK (rise edge)                               10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.07       9.93
+  FIR/DOUT_tmp_reg[7]/CK (DFFR_X1)                        0.00       9.93 r
+  library setup time                                     -0.04       9.89
+  data required time                                                 9.89
   --------------------------------------------------------------------------
-  data required time                                                 7.89
-  data arrival time                                                 -1.99
+  data required time                                                 9.89
+  data arrival time                                                 -2.52
   --------------------------------------------------------------------------
-  slack (MET)                                                        5.90
+  slack (MET)                                                        7.38
 
 
 1
