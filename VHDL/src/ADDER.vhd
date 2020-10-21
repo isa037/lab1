@@ -13,6 +13,6 @@ END ADDER;
 ARCHITECTURE BEHAVIOR OF ADDER IS
 BEGIN	
 
-	OUTPUT<=std_logic_vector(to_signed(A)+to_signed(B));
+	OUTPUT<=std_logic_vector(signed(A)+signed(B));
 
 END BEHAVIOR;
