@@ -23,6 +23,12 @@ architecture structural of my_fir is
 				ENABLE, CLOCK, RESETN : IN STD_LOGIC;
 				Q :	OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0));
 	END component;
+	
+	component FFN_EN_FP IS
+		PORT (R : IN STD_LOGIC;
+				ENABLE, CLOCK, RESETN : IN STD_LOGIC;
+				Q :	OUT STD_LOGIC);
+	END component;
 
 	component ADDER IS
 		GENERIC ( N : INTEGER:=9);
@@ -62,6 +68,12 @@ architecture structural of my_fir is
 	
 	signal last_prod: FourOfNine; --last product shift register
 
+	type arrayOf4Std_Logic is array(0 to 3) of std_logic;
+	signal skewed_enable :arrayOf4Std_Logic;
+
+	type array_en_pipe is array(2 to 4) of std_logic;
+	signal en_pipe : array_en_pipe;
+		
 begin
 	
 	--Componenti
@@ -83,7 +95,7 @@ begin
 	begin
 		pipe2_reg: REGN_EN_FP 
 			generic map (N=>9)
-			port map (R=> pipe2_in(I), Q=>pipe2_out(I),ENABLE=>EN_IN_REG,CLOCK=>CLK,RESETN=>reg_rst);
+			port map (R=> pipe2_in(I), Q=>pipe2_out(I),ENABLE=>en_pipe(2),CLOCK=>CLK,RESETN=>reg_rst);
 	end generate pipe2;
 
 	somma2: for I in 0 to 1 generate
@@ -96,7 +108,7 @@ begin
 	begin
 		pipe3_reg: REGN_EN_FP 
 			generic map (N=>9)
-			port map (R=> pipe3_in(I), Q=>pipe3_out(I),ENABLE=>EN_IN_REG,CLOCK=>CLK,RESETN=>reg_rst);
+			port map (R=> pipe3_in(I), Q=>pipe3_out(I),ENABLE=>en_pipe(3),CLOCK=>CLK,RESETN=>reg_rst);
 	end generate pipe3;
 
 	somma3_sum: ADDER
@@ -104,7 +116,7 @@ begin
 
 	pipe4_reg: REGN_EN_FP 
 		generic map (N=>9)
-		port map (R=> pipe4_in, Q=>pipe4_out,ENABLE=>EN_IN_REG,CLOCK=>CLK,RESETN=>reg_rst);
+		port map (R=> pipe4_in, Q=>pipe4_out,ENABLE=>en_pipe(4),CLOCK=>CLK,RESETN=>reg_rst);
 
 	somma4_sum: ADDER
 		port map (A=> somma4_inA, B=>somma4_inB, OUTPUT=> somma4_out);
@@ -131,13 +143,23 @@ begin
 			port map (R=>x_int(I), Q=>x_int(I+1), ENABLE=>EN_IN_REG,CLOCK=>CLK,RESETN=>reg_rst);
 	end generate shift_reg;
 	
-	last_prod_sr: for I in 0 to 2 generate
+	last_prod_sr: for I in 2 to 4 generate
 	begin
 		last_prod_reg: REGN_EN_FP
 			generic map (N=>9)
-			port map (R=>last_prod(I), Q=>last_prod(I+1), ENABLE=>EN_IN_REG,CLOCK=>CLK,RESETN=>reg_rst);
+			port map (R=>last_prod(I-2), Q=>last_prod(I-2+1), ENABLE=>en_pipe(I),CLOCK=>CLK,RESETN=>reg_rst);
 	end generate last_prod_sr;
-
+	
+	command_skew: for I in 0 to 2 generate
+	begin
+		last_prod_reg: FFN_EN_FP
+			port map (R=>skewed_enable(I), Q=>skewed_enable(I+1), ENABLE=>'1',CLOCK=>CLK,RESETN=>reg_rst);
+	end generate command_skew;
+	skewed_enable(0)<=EN_IN_REG;
+	en_pipe(2) <= skewed_enable(1);
+	en_pipe(3) <= skewed_enable(2) or skewed_enable(1);
+	en_pipe(4) <= skewed_enable(3) or skewed_enable(2) or skewed_enable(1);
+	
 	--Collegamenti
 
 	mult1_inA<=x_int;

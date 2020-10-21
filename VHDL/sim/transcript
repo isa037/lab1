@@ -27,7 +27,7 @@
 # Loading work.adder(behavior)#1
 # Loading work.multiplier(behavior)#1
 # Loading work.regn_en_fp(behavior)#2
-# Loading work.control(structural)
 # Loading work.ffn_en_fp(behavior)
+# Loading work.control(structural)
 # Loading work.tb_output_data_checker(beh)
-run 5us
+run 5 us
