@@ -343,5 +343,8 @@
 #    Time: 0 ns  Iteration: 0  Instance: /tb_fir/UUT/FIR_DOUT_tmp_reg_0_
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
 #    Time: 0 ns  Iteration: 0  Region: /tb_fir  File: ../tb/TB_FILTER.v
+vcd file ../vcd/myfir_syn.vcd
+#Then, we specify that we want to monitor all the signals inside our unit-under-test (the FIR filter):
+vcd add /tb_fir/UUT/*
 run 5 us
 quit
