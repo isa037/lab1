@@ -7,7 +7,7 @@ library work;
 use work.pkg.all;
 
 entity my_fir is
-	port ( DIN: in signed(7 downto 0); 
+	port ( m1,m2,m3,m4,m5,m6,m7,m8,m9: in signed(7 downto 0); 
 		   b: in array8(8 downto 0);	--9 Coefficienti da 8 bit
 		   DOUT: out signed(7 downto 0);
 		   CLK, reg_rst: std_logic;
