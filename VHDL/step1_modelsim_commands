@@ -3,12 +3,14 @@ cd /home/isa37/git/lab1/VHDL/sim/
 source /software/scripts/init_msim6.2g
 rm -r work
 vlib work
-vcom -93 -work ./work ../src/coeffs.vhd
 vcom -93 -work ./work ../src/pkg.vhd
 vcom -93 -work ./work ../src/ADDER.vhd
 vcom -93 -work ./work ../src/FF.vhd
 vcom -93 -work ./work ../src/MULTIPLIER.vhd
 vcom -93 -work ./work ../src/REG.vhd
+vcom -93 -work ./work ../src/ThreeMult012.vhd
+vcom -93 -work ./work ../src/ThreeMult123.vhd
+vcom -93 -work ./work ../src/sum_tree.vhd
 vcom -93 -work ./work ../src/control.vhd
 vcom -93 -work ./work ../src/full_FIR.vhd
 vcom -93 -work ./work ../src/my_fir.vhd

@@ -7,9 +7,9 @@ library work;
 use work.pkg.all;
 
 entity my_fir is
-	port ( m1,m2,m3,m4,m5,m6,m7,m8,m9: in signed(7 downto 0); 
+	port ( DIN0, DIN1, DIN2: in signed(7 downto 0); 	--DIN0: x[3k]; DIN1: x[3k+1]; DIN2: x[3k+2];
 		   b: in array8(8 downto 0);	--9 Coefficienti da 8 bit
-		   DOUT: out signed(7 downto 0);
+		   DOUT0, DOUT1, DOUT2: out signed(7 downto 0);  --DOUT0: y[3k]; DOUT1: y[3k+1]; DIN2: x[3k+2];
 		   CLK, reg_rst: std_logic;
 		   EN_OUT, EN_IN_REG: std_logic
 		);
@@ -23,175 +23,102 @@ architecture structural of my_fir is
 				ENABLE, CLOCK, RESETN : IN STD_LOGIC;
 				Q :	OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0));
 	END component;
+
+	component sum_tree is
+		port ( IN0, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8: in std_logic_vector(8 downto 0); 
+			   DOUT: out signed(7 downto 0);
+			   CLK, reg_rst: std_logic;
+			   EN_OUT, EN_IN_REG: std_logic
+			);
+	end component;
 	
-	component FFN_EN_FP IS
-		PORT (R : IN STD_LOGIC;
-				ENABLE, CLOCK, RESETN : IN STD_LOGIC;
-				Q :	OUT STD_LOGIC);
+	component THREE_MULT123 IS
+		PORT (  INPUT, C1, C2, C3 : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+			ENABLE, CLOCK, RESETN : IN STD_LOGIC;
+			OUTPUT1, OUTPUT2, OUTPUT3 :	OUT STD_LOGIC_VECTOR(8 DOWNTO 0));
 	END component;
-
-	component ADDER IS
-		GENERIC ( N : INTEGER:=9);
-		PORT (	A : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
-				B : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
-				OUTPUT :	OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0));
-	END component;
-
-	component MULTIPLIER IS
-		GENERIC ( N, M, K : INTEGER:=24);
-		PORT (	A : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
-				B : IN signed(M-1 DOWNTO 0);
-				OUTPUT :	OUT STD_LOGIC_VECTOR(K-1 DOWNTO 0));
-	END component;
-
-	type NineOfNine is array (0 to 8) of std_logic_vector(8 downto 0);
-	signal pipe1_in, pipe1_out : NineOfNine;
-	type FourOfNine is array (0 to 3) of std_logic_vector(8 downto 0);
-	signal pipe2_in, pipe2_out : FourOfNine;
-	type TwoOfNine is array (0 to 1) of std_logic_vector(8 downto 0);
-	signal pipe3_in, pipe3_out : TwoOfNine;
-	signal pipe4_in, pipe4_out : std_logic_vector(8 downto 0);
-	signal somma1_out : FourOfNine;
-	signal somma1_inA, somma1_inB : FourOfNine;
-	signal somma2_out : TwoOfNine;
-	signal somma2_inA, somma2_inB : TwoOfNine;
-
-	signal somma3_inA, somma3_inB, somma3_out: std_logic_vector(8 downto 0);
-	signal somma4_inA, somma4_inB, somma4_out: std_logic_vector(8 downto 0);
-	signal DOUT_tmp: std_logic_vector(8 downto 0);
-
-	type NineOfEight is array(0 to 8) of std_logic_vector(7 downto 0);
-	signal mult1_inA: NineOfEight;
-	type NineOfFifteen is array(0 to 8) of std_logic_vector(15 downto 0);
-	signal mult1_out: NineOfNine;
-	signal x_int: NineOfEight;
 	
-	signal last_prod: FourOfNine; --last product shift register
+	component THREE_MULT012 IS
+		PORT (  INPUT, C1, C2, C3 : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+			ENABLE, CLOCK, RESETN : IN STD_LOGIC;
+			OUTPUT1, OUTPUT2, OUTPUT3 :	OUT STD_LOGIC_VECTOR(8 DOWNTO 0));
+	END component;
 
-	type arrayOf4Std_Logic is array(0 to 3) of std_logic;
-	signal skewed_enable :arrayOf4Std_Logic;
-
-	type array_en_pipe is array(2 to 4) of std_logic;
-	signal en_pipe : array_en_pipe;
+	signal DIN0_tmp, DIN1_tmp, DIN2_tmp: std_logic_vector(7 downto 0);
+	
+	signal multout0_0, multout0_1, multout0_2, multout0_3, multout0_4, multout0_5, multout0_6, multout0_7, multout0_8: std_logic_vector(8 downto 0);
+	signal multout1_0, multout1_1, multout1_2, multout1_3, multout1_4, multout1_5, multout1_6, multout1_7, multout1_8: std_logic_vector(8 downto 0);
+	signal multout2_0, multout2_1, multout2_2, multout2_3, multout2_4, multout2_5, multout2_6, multout2_7, multout2_8: std_logic_vector(8 downto 0);
 		
 begin
+
+	--Input sampling
+
+	DIN0_load: REGN_EN_FP
+		port map (R=>std_logic_vector(DIN0), Q=>DIN0_tmp, ENABLE=>'1', CLOCK=>CLK, RESETN=>reg_rst );
+
+	DIN1_load: REGN_EN_FP
+		port map (R=>std_logic_vector(DIN1), Q=>DIN1_tmp, ENABLE=>'1', CLOCK=>CLK, RESETN=>reg_rst );
+
+	DIN2_load: REGN_EN_FP
+		port map (R=>std_logic_vector(DIN2), Q=>DIN2_tmp, ENABLE=>'1', CLOCK=>CLK, RESETN=>reg_rst ); 
+
+	--y[3k]
 	
-	--Componenti
+	y3k_0: THREE_MULT012
+		port map (INPUT=>DIN0_tmp, C1=>std_logic_vector(b(0)), C2=>std_logic_vector(b(3)), C3=>std_logic_vector(b(6)), ENABLE=>EN_IN_REG, CLOCK=>CLK, RESETN=>reg_rst,
+			OUTPUT1=>multout0_0 , OUTPUT2=>multout0_1 , OUTPUT3=>multout0_2);
 	
-	pipe1: for I in 0 to 8 generate
-	begin
-		pipe1_reg: REGN_EN_FP 
-			generic map (N=>9)
-			port map (R=> pipe1_in(I), Q=>pipe1_out(I),ENABLE=>EN_IN_REG,CLOCK=>CLK,RESETN=>reg_rst);
-	end generate pipe1;
+	y3k_1: THREE_MULT123
+		port map (INPUT=>DIN1_tmp, C1=>std_logic_vector(b(2)), C2=>std_logic_vector(b(5)), C3=>std_logic_vector(b(8)), ENABLE=>EN_IN_REG, CLOCK=>CLK, RESETN=>reg_rst,
+			OUTPUT1=>multout0_3 , OUTPUT2=>multout0_4 , OUTPUT3=>multout0_5);
 
-	somma1: for I in 0 to 3 generate
-	begin
-		somma1_sum: ADDER
-			port map ( A=>somma1_inA(I) , B=>somma1_inB(I) ,OUTPUT => somma1_out(I));
-	end generate somma1;
+	y3k_2: THREE_MULT123
+		port map (INPUT=>DIN2_tmp, C1=>std_logic_vector(b(1)), C2=>std_logic_vector(b(4)), C3=>std_logic_vector(b(7)), ENABLE=>EN_IN_REG, CLOCK=>CLK, RESETN=>reg_rst,
+			OUTPUT1=>multout0_6 , OUTPUT2=>multout0_7 , OUTPUT3=>multout0_8);
+			
+	y3k_3: sum_tree
+		port map (IN0=>multout0_0, IN1=>multout0_1, IN2=>multout0_2, IN3=>multout0_3,
+				IN4=>multout0_4, IN5=>multout0_5, IN6=>multout0_6, IN7=>multout0_7, IN8=>multout0_8, DOUT=>DOUT0, CLK=>CLK, reg_rst=>reg_rst,
+				EN_OUT=>EN_OUT, EN_IN_REG=>EN_IN_REG);
 
-	pipe2: for I in 0 to 3 generate
-	begin
-		pipe2_reg: REGN_EN_FP 
-			generic map (N=>9)
-			port map (R=> pipe2_in(I), Q=>pipe2_out(I),ENABLE=>en_pipe(2),CLOCK=>CLK,RESETN=>reg_rst);
-	end generate pipe2;
-
-	somma2: for I in 0 to 1 generate
-	begin
-		somma2_sum: ADDER
-			port map ( A=>somma2_inA(I) , B=>somma2_inB(I) ,OUTPUT => somma2_out(I));
-	end generate somma2;
-
-	pipe3: for I in 0 to 1 generate
-	begin
-		pipe3_reg: REGN_EN_FP 
-			generic map (N=>9)
-			port map (R=> pipe3_in(I), Q=>pipe3_out(I),ENABLE=>en_pipe(3),CLOCK=>CLK,RESETN=>reg_rst);
-	end generate pipe3;
-
-	somma3_sum: ADDER
-		port map (A=> somma3_inA, B=>somma3_inB, OUTPUT=> somma3_out);
-
-	pipe4_reg: REGN_EN_FP 
-		generic map (N=>9)
-		port map (R=> pipe4_in, Q=>pipe4_out,ENABLE=>en_pipe(4),CLOCK=>CLK,RESETN=>reg_rst);
-
-	somma4_sum: ADDER
-		port map (A=> somma4_inA, B=>somma4_inB, OUTPUT=> somma4_out);
-
-	mult1: for I in 0 to 8 generate
-	begin
-		mult1_mult: MULTIPLIER
-			generic map (N=>8, M=>8, K=>9)
-			port map (A=>mult1_inA(I), B=>b(I), OUTPUT=> mult1_out(I));
-	end generate mult1;
-
-	loading: REGN_EN_FP
-		generic map (N=>8)
-		port map (R=> std_logic_vector(DIN), Q=>x_int(0), ENABLE=>'1', CLOCK=>CLK, RESETN=>reg_rst);
-
-	saving: REGN_EN_FP
-		generic map (N=>9)
-		port map (R=> somma4_out, Q=>DOUT_tmp, ENABLE=>EN_OUT, CLOCK=>CLK, RESETN=>reg_rst);
-
-	shift_reg: for I in 0 to 7 generate
-	begin
-		shift_reg_reg: REGN_EN_FP
-			generic map (N=>8)
-			port map (R=>x_int(I), Q=>x_int(I+1), ENABLE=>EN_IN_REG,CLOCK=>CLK,RESETN=>reg_rst);
-	end generate shift_reg;
+	--y[3k+1]
 	
-	last_prod_sr: for I in 2 to 4 generate
-	begin
-		last_prod_reg: REGN_EN_FP
-			generic map (N=>9)
-			port map (R=>last_prod(I-2), Q=>last_prod(I-2+1), ENABLE=>en_pipe(I),CLOCK=>CLK,RESETN=>reg_rst);
-	end generate last_prod_sr;
+	y3k1_0: THREE_MULT012
+		port map (INPUT=>DIN0_tmp, C1=>std_logic_vector(b(1)), C2=>std_logic_vector(b(4)), C3=>std_logic_vector(b(7)), ENABLE=>EN_IN_REG, CLOCK=>CLK, RESETN=>reg_rst,
+			OUTPUT1=>multout1_0 , OUTPUT2=>multout1_1 , OUTPUT3=>multout1_2);
 	
-	command_skew: for I in 0 to 2 generate
-	begin
-		last_prod_reg: FFN_EN_FP
-			port map (R=>skewed_enable(I), Q=>skewed_enable(I+1), ENABLE=>'1',CLOCK=>CLK,RESETN=>reg_rst);
-	end generate command_skew;
-	skewed_enable(0)<=EN_IN_REG;
-	en_pipe(2) <= skewed_enable(1);
-	en_pipe(3) <= skewed_enable(2) or skewed_enable(1);
-	en_pipe(4) <= skewed_enable(3) or skewed_enable(2) or skewed_enable(1);
+	y3k1_1: THREE_MULT012
+		port map (INPUT=>DIN1_tmp, C1=>std_logic_vector(b(0)), C2=>std_logic_vector(b(3)), C3=>std_logic_vector(b(6)), ENABLE=>EN_IN_REG, CLOCK=>CLK, RESETN=>reg_rst,
+			OUTPUT1=>multout1_3 , OUTPUT2=>multout1_4 , OUTPUT3=>multout1_5);
+
+	y3k1_2: THREE_MULT123
+		port map (INPUT=>DIN2_tmp, C1=>std_logic_vector(b(2)), C2=>std_logic_vector(b(5)), C3=>std_logic_vector(b(8)), ENABLE=>EN_IN_REG, CLOCK=>CLK, RESETN=>reg_rst,
+			OUTPUT1=>multout1_6 , OUTPUT2=>multout1_7 , OUTPUT3=>multout1_8);
+			
+	y3k1_3: sum_tree
+		port map (IN0=>multout1_0, IN1=>multout1_1, IN2=>multout1_2, IN3=>multout1_3,
+				IN4=>multout1_4, IN5=>multout1_5, IN6=>multout1_6, IN7=>multout1_7, IN8=>multout1_8, DOUT=>DOUT1, CLK=>CLK, reg_rst=>reg_rst,
+				EN_OUT=>EN_OUT, EN_IN_REG=>EN_IN_REG);
+
+	--y[3k+2]
 	
-	--Collegamenti
-
-	mult1_inA<=x_int;
-	pipe1_in<=mult1_out;
-	last_prod(0)<=pipe1_out(8);
-	somma1_inA(0)<=pipe1_out(0);
-	somma1_inB(0)<=pipe1_out(1);
-	somma1_inA(1)<=pipe1_out(2);
-	somma1_inB(1)<=pipe1_out(3);
-	somma1_inA(2)<=pipe1_out(4);
-	somma1_inB(2)<=pipe1_out(5);
-	somma1_inA(3)<=pipe1_out(6);
-	somma1_inB(3)<=pipe1_out(7);
-
-	pipe2_in<=somma1_out;
-
-	somma2_inA(0)<=pipe2_out(0);
-	somma2_inB(0)<=pipe2_out(1);
-	somma2_inA(1)<=pipe2_out(2);
-	somma2_inB(1)<=pipe2_out(3);
-
-	pipe3_in(0 to 1)<=somma2_out;
-
-	somma3_inA<=pipe3_out(0);
-	somma3_inB<=pipe3_out(1);
+	y3k2_0: THREE_MULT012
+		port map (INPUT=>DIN0_tmp, C1=>std_logic_vector(b(2)), C2=>std_logic_vector(b(5)), C3=>std_logic_vector(b(8)), ENABLE=>EN_IN_REG, CLOCK=>CLK, RESETN=>reg_rst,
+			OUTPUT1=>multout2_0 , OUTPUT2=>multout2_1 , OUTPUT3=>multout2_2);
 	
-	pipe4_in<=somma3_out;
+	y3k2_1: THREE_MULT012
+		port map (INPUT=>DIN1_tmp, C1=>std_logic_vector(b(1)), C2=>std_logic_vector(b(4)), C3=>std_logic_vector(b(7)), ENABLE=>EN_IN_REG, CLOCK=>CLK, RESETN=>reg_rst,
+			OUTPUT1=>multout2_3 , OUTPUT2=>multout2_4 , OUTPUT3=>multout2_5);
 
-	somma4_inA<=pipe4_out;
-	somma4_inB<=last_prod(3);
-	
-	DOUT<=signed(DOUT_tmp(7 downto 0));
-	
+	y3k2_2: THREE_MULT012
+		port map (INPUT=>DIN2_tmp, C1=>std_logic_vector(b(0)), C2=>std_logic_vector(b(3)), C3=>std_logic_vector(b(6)), ENABLE=>EN_IN_REG, CLOCK=>CLK, RESETN=>reg_rst,
+			OUTPUT1=>multout2_6 , OUTPUT2=>multout2_7 , OUTPUT3=>multout2_8);
+			
+	y3k2_3: sum_tree
+		port map (IN0=>multout1_0, IN1=>multout1_1, IN2=>multout1_2, IN3=>multout1_3,
+				IN4=>multout1_4, IN5=>multout1_5, IN6=>multout1_6, IN7=>multout1_7, IN8=>multout1_8, DOUT=>DOUT1, CLK=>CLK, reg_rst=>reg_rst,
+				EN_OUT=>EN_OUT, EN_IN_REG=>EN_IN_REG);
+
 
 end structural;
