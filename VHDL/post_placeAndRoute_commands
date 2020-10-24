@@ -1,4 +1,7 @@
-cd /home/isa37/Documents/lab1/VHDL/sim/
+cd /home/isa37/git/lab1/VHDL/sim/
+
+#run modelsim environment
+source /software/scripts/init_msim6.2g
 
 vcom -93 -work ./work ../tb/clk_gen.vhd
 vcom -93 -work ./work ../tb/tb_output_data_checker.vhd
