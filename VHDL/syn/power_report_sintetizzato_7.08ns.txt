@@ -1,13 +1,10 @@
-Information: Updating design information... (UID-85)
-Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
-Warning: There is no defined clock in the design. (PWR-80)
  
 ****************************************
 Report : power
         -analysis_effort low
 Design : full_FIR
 Version: O-2018.06-SP4
-Date   : Tue Oct 13 11:06:02 2020
+Date   : Sat Oct 24 11:26:13 2020
 ****************************************
 
 
@@ -33,12 +30,12 @@ Power-specific unit information :
     Leakage Power Units = 1nW
 
 
-  Cell Internal Power  = 391.5426 uW   (60%)
-  Net Switching Power  = 264.7831 uW   (40%)
+  Cell Internal Power  =   1.5606 mW   (66%)
+  Net Switching Power  = 811.6526 uW   (34%)
                          ---------
-Total Dynamic Power    = 656.3257 uW  (100%)
+Total Dynamic Power    =   2.3723 mW  (100%)
 
-Cell Leakage Power     =  71.7963 uW
+Cell Leakage Power     = 281.5654 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -48,9 +45,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register         165.2979           53.7783        1.3667e+04          232.7436  (  31.96%)
+register         872.3649          192.2681        7.6428e+04        1.1411e+03  (  43.00%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational    226.2448          211.0050        5.8129e+04          495.3783  (  68.04%)
+combinational    688.2673          619.3855        2.0514e+05        1.5128e+03  (  57.00%)
 --------------------------------------------------------------------------------------------------
-Total            391.5427 uW       264.7833 uW     7.1796e+04 nW       728.1218 uW
+Total          1.5606e+03 uW       811.6536 uW     2.8157e+05 nW     2.6538e+03 uW
 1

@@ -9,10 +9,21 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 ============================================================================
 
 
+Information: There are 12 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
 
   Beginning Pass 1 Mapping
   ------------------------
+  Processing 'FFN_EN_FP_0'
   Processing 'control'
+  Processing 'REGN_EN_FP_N9_0'
+  Processing 'ADDER_N9_0'
+  Processing 'sum_tree_0'
+  Processing 'MULTIPLIER_N8_M8_K9_0'
+  Processing 'REGN_EN_FP_N8_0'
+  Processing 'THREE_MULT012_0'
+  Processing 'THREE_MULT123_0'
   Processing 'my_fir'
   Processing 'full_FIR'
 
@@ -21,23 +32,57 @@ Information: Updating design information... (UID-85)
 
   Beginning Implementation Selection
   ----------------------------------
-  Processing 'my_fir_DW01_add_0'
-  Processing 'my_fir_DW01_add_1'
-  Processing 'my_fir_DW01_add_2'
-  Processing 'my_fir_DW01_add_3'
-  Processing 'my_fir_DW01_add_4'
-  Processing 'my_fir_DW01_add_5'
-  Processing 'my_fir_DW01_add_6'
-  Processing 'my_fir_DW01_add_7'
-  Mapping 'my_fir_DW_mult_tc_0'
-  Mapping 'my_fir_DW_mult_tc_1'
-  Mapping 'my_fir_DW_mult_tc_2'
-  Mapping 'my_fir_DW_mult_tc_3'
-  Mapping 'my_fir_DW_mult_tc_4'
-  Mapping 'my_fir_DW_mult_tc_5'
-  Mapping 'my_fir_DW_mult_tc_6'
-  Mapping 'my_fir_DW_mult_tc_7'
-  Mapping 'my_fir_DW_mult_tc_8'
+  Processing 'ADDER_N9_1_DW01_add_0'
+  Processing 'ADDER_N9_2_DW01_add_0'
+  Processing 'ADDER_N9_3_DW01_add_0'
+  Processing 'ADDER_N9_4_DW01_add_0'
+  Processing 'ADDER_N9_5_DW01_add_0'
+  Processing 'ADDER_N9_6_DW01_add_0'
+  Processing 'ADDER_N9_7_DW01_add_0'
+  Processing 'ADDER_N9_8_DW01_add_0'
+  Processing 'ADDER_N9_9_DW01_add_0'
+  Processing 'ADDER_N9_10_DW01_add_0'
+  Processing 'ADDER_N9_11_DW01_add_0'
+  Processing 'ADDER_N9_12_DW01_add_0'
+  Processing 'ADDER_N9_13_DW01_add_0'
+  Processing 'ADDER_N9_14_DW01_add_0'
+  Processing 'ADDER_N9_15_DW01_add_0'
+  Processing 'ADDER_N9_16_DW01_add_0'
+  Processing 'ADDER_N9_17_DW01_add_0'
+  Processing 'ADDER_N9_18_DW01_add_0'
+  Processing 'ADDER_N9_19_DW01_add_0'
+  Processing 'ADDER_N9_20_DW01_add_0'
+  Processing 'ADDER_N9_21_DW01_add_0'
+  Processing 'ADDER_N9_22_DW01_add_0'
+  Processing 'ADDER_N9_23_DW01_add_0'
+  Processing 'ADDER_N9_0_DW01_add_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_21_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_12_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_24_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_14_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_2_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_26_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_20_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_17_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_5_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_11_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_8_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_23_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_13_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_1_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_25_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_19_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_16_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_4_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_10_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_7_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_22_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_3_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_15_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_6_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_18_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_9_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_0_DW_mult_tc_0'
 
   Beginning Mapping Optimizations  (Medium effort)
   -------------------------------
@@ -46,19 +91,32 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:07    3951.4      0.00       0.0      58.7                          
-    0:00:07    3951.4      0.00       0.0      58.7                          
-    0:00:07    3951.4      0.00       0.0      58.7                          
-    0:00:07    3951.4      0.00       0.0      58.7                          
-    0:00:07    3951.4      0.00       0.0      58.7                          
-    0:00:08    3639.9      0.01       0.0       0.0                          
-    0:00:08    3643.1      0.00       0.0       0.0                          
-    0:00:08    3643.1      0.00       0.0       0.0                          
-    0:00:08    3643.1      0.00       0.0       0.0                          
-    0:00:08    3643.1      0.00       0.0       0.0                          
-    0:00:08    3643.1      0.00       0.0       0.0                          
-    0:00:08    3643.1      0.00       0.0       0.0                          
-    0:00:08    3643.1      0.00       0.0       0.0                          
+    0:00:33   15133.0      0.35      35.4    1431.4                          
+    0:00:33   15133.0      0.35      35.4    1431.4                          
+    0:00:56   15460.7      0.29      24.5      25.1                          
+    0:00:58   15460.7      0.29      24.5      25.1                          
+    0:00:58   15460.7      0.29      24.5      25.1                          
+    0:00:58   15460.7      0.29      24.5      25.1                          
+    0:00:59   15460.7      0.29      24.5      25.1                          
+    0:01:12   13895.8      0.30      22.2       1.8                          
+    0:01:16   13914.5      0.28      21.2       1.8                          
+    0:01:18   13926.4      0.26      20.5       1.8                          
+    0:01:18   13937.9      0.26      19.7       1.8                          
+    0:01:19   13951.2      0.26      18.7       1.8                          
+    0:01:20   13965.5      0.25      17.8       1.8                          
+    0:01:21   13980.7      0.24      16.8       1.8                          
+    0:01:22   13992.4      0.23      16.3       1.8                          
+    0:01:22   13999.6      0.23      15.9       1.8                          
+    0:01:23   14006.5      0.22      15.5       1.8                          
+    0:01:24   14019.8      0.21      14.9       1.8                          
+    0:01:25   14028.0      0.21      14.5       1.8                          
+    0:01:26   14032.0      0.20      14.1       1.8                          
+    0:01:26   14032.0      0.20      14.1       1.8                          
+    0:01:26   14032.0      0.20      14.1       1.8                          
+    0:01:27   14032.6      0.20      14.1       0.0                          
+    0:01:27   14032.6      0.20      14.1       0.0                          
+    0:01:27   14032.6      0.20      14.1       0.0                          
+    0:01:27   14032.6      0.20      14.1       0.0                          
 
 
 
@@ -69,9 +127,182 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:08    3643.1      0.00       0.0       0.0                          
-    0:00:08    3643.1      0.00       0.0       0.0                          
-    0:00:08    3643.1      0.00       0.0       0.0                          
+    0:01:27   14032.6      0.20      14.1       0.0                          
+    0:01:28   14047.7      0.20      13.9       1.1 FIR/y3k2_3/pipe1_reg2/Q_reg[7]/D
+    0:01:29   14075.9      0.20      13.6       2.3 FIR/y3k_3/pipe1_reg6/Q_reg[7]/D
+    0:01:30   14097.2      0.20      13.3       3.4 FIR/y3k1_3/pipe1_reg5/Q_reg[7]/D
+    0:01:31   14116.4      0.19      12.9       3.4 FIR/y3k1_3/pipe1_reg1/Q_reg[8]/D
+    0:01:32   14132.3      0.19      12.6       3.4 FIR/y3k_3/pipe1_reg5/Q_reg[8]/D
+    0:01:33   14156.0      0.19      12.2       4.6 FIR/y3k_3/pipe1_reg1/Q_reg[8]/D
+    0:01:34   14185.8      0.19      11.9       9.1 FIR/y3k1_3/pipe1_reg0/Q_reg[7]/D
+    0:01:35   14191.4      0.18      11.7       9.1 FIR/y3k2_3/pipe1_reg7/Q_reg[7]/D
+    0:01:36   14207.3      0.18      11.3      10.2 FIR/y3k2_3/pipe1_reg3/Q_reg[7]/D
+    0:01:37   14231.0      0.18      11.0      11.4 FIR/y3k_3/pipe1_reg1/Q_reg[8]/D
+    0:01:38   14251.0      0.17      10.7      11.4 FIR/y3k1_3/pipe1_reg4/Q_reg[8]/D
+    0:01:39   14261.9      0.17      10.3      11.4 FIR/y3k2_3/pipe1_reg6/Q_reg[7]/D
+    0:01:40   14289.8      0.17      10.0      11.4 FIR/y3k1_3/pipe1_reg8/Q_reg[8]/D
+    0:01:40   14299.1      0.16       9.8      11.4 FIR/y3k_3/pipe1_reg2/Q_reg[7]/D
+    0:01:41   14305.5      0.16       9.6      11.4 FIR/y3k_3/pipe1_reg7/Q_reg[8]/D
+    0:01:42   14304.9      0.16       9.4      11.4 FIR/y3k_3/pipe1_reg4/Q_reg[7]/D
+    0:01:43   14315.1      0.15       9.2      11.4 FIR/y3k2_3/pipe1_reg1/Q_reg[7]/D
+    0:01:44   14334.2      0.15       9.0      11.4 FIR/y3k2_3/pipe1_reg8/Q_reg[7]/D
+    0:01:45   14337.7      0.15       8.9      11.4 FIR/y3k_3/pipe1_reg5/Q_reg[8]/D
+    0:01:45   14354.4      0.15       8.7      11.4 FIR/y3k2_3/pipe1_reg2/Q_reg[7]/D
+    0:01:45   14362.1      0.15       8.6      11.4 FIR/y3k_3/pipe1_reg4/Q_reg[7]/D
+    0:01:46   14368.3      0.15       8.4      11.4 FIR/y3k1_3/pipe1_reg0/Q_reg[8]/D
+    0:01:46   14375.7      0.14       8.2      11.4 FIR/y3k1_3/pipe1_reg3/Q_reg[8]/D
+    0:01:47   14392.5      0.14       8.0      11.4 FIR/y3k2_3/pipe1_reg2/Q_reg[7]/D
+    0:01:48   14403.6      0.13       7.8      11.4 FIR/y3k2_3/pipe1_reg7/Q_reg[7]/D
+    0:01:49   14419.1      0.13       7.5      11.4 FIR/y3k_3/pipe1_reg2/Q_reg[8]/D
+    0:01:49   14428.4      0.13       7.4      11.4 FIR/y3k2_3/pipe1_reg5/Q_reg[7]/D
+    0:01:50   14440.3      0.13       7.0      11.4 FIR/y3k1_3/pipe1_reg5/Q_reg[8]/D
+    0:01:50   14441.9      0.12       6.9      11.4 FIR/y3k_3/pipe1_reg7/Q_reg[8]/D
+    0:01:50   14449.7      0.12       6.8      11.4 FIR/y3k1_3/pipe1_reg0/Q_reg[8]/D
+    0:01:51   14456.0      0.12       6.7      11.4 FIR/y3k_3/pipe1_reg7/Q_reg[8]/D
+    0:01:52   14477.8      0.12       6.5      12.5 FIR/y3k_3/pipe1_reg4/Q_reg[7]/D
+    0:01:52   14490.6      0.12       6.5      13.7 FIR/y3k1_3/pipe1_reg7/Q_reg[7]/D
+    0:01:53   14501.5      0.12       6.3      19.3 FIR/y3k2_3/pipe1_reg6/Q_reg[7]/D
+    0:01:54   14522.5      0.12       6.2      24.9 FIR/y3k2_3/pipe1_reg0/Q_reg[8]/D
+    0:01:54   14550.5      0.12       6.1      50.7 FIR/y3k2_3/pipe1_reg4/Q_reg[8]/D
+    0:01:55   14558.4      0.11       6.0      50.7 FIR/y3k_3/pipe1_reg0/Q_reg[8]/D
+    0:01:55   14568.6      0.11       5.9      51.8 FIR/y3k_3/pipe1_reg1/Q_reg[8]/D
+    0:01:56   14570.9      0.11       5.7      51.8 FIR/y3k1_3/pipe1_reg7/Q_reg[7]/D
+    0:01:57   14584.0      0.11       5.6      47.1 FIR/y3k2_3/pipe1_reg6/Q_reg[7]/D
+    0:01:57   14589.0      0.11       5.5      47.1 FIR/y3k_3/pipe1_reg2/Q_reg[8]/D
+    0:01:58   14615.9      0.11       5.4      72.9 FIR/y3k_3/pipe1_reg8/Q_reg[8]/D
+    0:01:59   14637.2      0.11       5.2      74.1 FIR/y3k2_3/pipe1_reg7/Q_reg[8]/D
+    0:02:00   14649.7      0.10       5.2      75.2 FIR/y3k2_3/pipe1_reg2/Q_reg[7]/D
+    0:02:01   14673.4      0.10       5.0      99.4 FIR/y3k_3/pipe1_reg6/Q_reg[8]/D
+    0:02:01   14681.6      0.10       4.9      99.4 FIR/y3k_3/pipe1_reg7/Q_reg[8]/D
+    0:02:02   14693.6      0.09       4.6      99.4 FIR/y3k_3/pipe1_reg2/Q_reg[7]/D
+    0:02:03   14700.0      0.09       4.5      99.4 FIR/y3k1_3/pipe1_reg2/Q_reg[8]/D
+    0:02:03   14702.6      0.09       4.5      99.4 FIR/y3k2_3/pipe1_reg4/Q_reg[8]/D
+    0:02:04   14707.9      0.09       4.4      99.4 FIR/y3k1_3/pipe1_reg3/Q_reg[7]/D
+    0:02:04   14710.1      0.09       4.2      99.4 FIR/y3k1_3/pipe1_reg4/Q_reg[8]/D
+    0:02:05   14722.6      0.09       4.1     123.6 FIR/y3k2_3/pipe1_reg0/Q_reg[8]/D
+    0:02:06   14726.8      0.08       4.0     123.6 FIR/y3k_3/pipe1_reg5/Q_reg[8]/D
+    0:02:07   14740.4      0.08       3.9     123.6 FIR/y3k_3/pipe1_reg3/Q_reg[8]/D
+    0:02:07   14744.6      0.08       3.8     123.6 FIR/y3k1_3/pipe1_reg3/Q_reg[8]/D
+    0:02:08   14748.6      0.08       3.7     123.6 FIR/y3k_3/pipe1_reg5/Q_reg[8]/D
+    0:02:08   14764.1      0.08       3.5     128.8 FIR/y3k2_3/pipe1_reg1/Q_reg[8]/D
+    0:02:09   14770.7      0.08       3.4     128.8 FIR/y3k_3/pipe1_reg5/Q_reg[8]/D
+    0:02:10   14784.5      0.07       3.3     128.8 FIR/y3k2_3/pipe1_reg8/Q_reg[8]/D
+    0:02:11   14786.1      0.07       3.2     128.8 FIR/y3k1_3/pipe1_reg1/Q_reg[8]/D
+    0:02:11   14802.9      0.07       3.1     152.1 FIR/y3k2_3/pipe1_reg7/Q_reg[8]/D
+    0:02:12   14810.9      0.07       3.0     152.1 FIR/y3k2_3/pipe1_reg4/Q_reg[8]/D
+    0:02:12   14814.6      0.07       2.9     152.1 FIR/y3k_3/pipe1_reg3/Q_reg[8]/D
+    0:02:13   14838.8      0.06       2.8     175.5 FIR/y3k1_3/pipe1_reg3/Q_reg[7]/D
+    0:02:14   14846.3      0.06       2.8     175.5 FIR/y3k_3/pipe1_reg4/Q_reg[8]/D
+    0:02:14   14851.0      0.06       2.7     175.5 FIR/y3k2_3/pipe1_reg1/Q_reg[8]/D
+    0:02:15   14860.4      0.06       2.6     175.5 FIR/y3k_3/pipe1_reg0/Q_reg[8]/D
+    0:02:15   14889.9      0.06       2.5     225.5 FIR/y3k1_3/pipe1_reg3/Q_reg[8]/D
+    0:02:16   14896.0      0.06       2.4     225.5 FIR/y3k_3/pipe1_reg2/Q_reg[8]/D
+    0:02:16   14902.7      0.05       2.3     225.5 FIR/y3k2_3/pipe1_reg0/Q_reg[8]/D
+    0:02:17   14904.2      0.05       2.3     225.5 FIR/y3k1_3/pipe1_reg6/Q_reg[8]/D
+    0:02:17   14913.8      0.05       2.2     225.5 FIR/y3k_3/pipe1_reg8/Q_reg[8]/D
+    0:02:18   14913.6      0.05       2.2     225.5 FIR/y3k2_3/pipe1_reg5/Q_reg[8]/D
+    0:02:18   14912.8      0.05       2.2     225.5 FIR/y3k_3/pipe1_reg2/Q_reg[8]/D
+    0:02:18   14918.3      0.05       2.1     225.5 FIR/y3k_3/pipe1_reg3/Q_reg[8]/D
+    0:02:19   14916.2      0.05       2.1     225.5 FIR/y3k1_3/pipe1_reg6/Q_reg[8]/D
+    0:02:20   14923.4      0.05       2.0     249.7 FIR/y3k1_3/pipe1_reg1/Q_reg[8]/D
+    0:02:20   14930.6      0.04       2.0     249.7 FIR/y3k2_3/pipe1_reg3/Q_reg[8]/D
+    0:02:21   14934.3      0.04       2.0     249.7 FIR/y3k1_3/pipe1_reg6/Q_reg[8]/D
+    0:02:22   14963.8      0.04       1.9     284.5 FIR/y3k2_3/pipe1_reg7/Q_reg[8]/D
+    0:02:23   14966.8      0.04       1.8     284.5 FIR/y3k_3/pipe1_reg0/Q_reg[8]/D
+    0:02:23   14972.1      0.04       1.8     284.5 FIR/y3k2_3/pipe1_reg5/Q_reg[8]/D
+    0:02:24   14971.8      0.04       1.8     284.5 FIR/y3k1_3/pipe1_reg2/Q_reg[8]/D
+    0:02:25   14977.1      0.04       1.8     284.5 FIR/y3k_3/pipe1_reg3/Q_reg[8]/D
+    0:02:25   14990.4      0.04       1.7     308.7 FIR/y3k_3/pipe1_reg0/Q_reg[8]/D
+    0:02:26   14994.7      0.04       1.7     308.7 FIR/y3k2_3/pipe1_reg1/Q_reg[8]/D
+    0:02:27   15007.5      0.04       1.7     333.0 FIR/y3k_3/pipe1_reg5/Q_reg[8]/D
+    0:02:27   15010.1      0.04       1.7     333.0 FIR/y3k_3/pipe1_reg4/Q_reg[8]/D
+    0:02:28   15015.2      0.04       1.6     333.0 FIR/y3k2_3/pipe1_reg1/Q_reg[8]/D
+    0:02:28   15020.5      0.04       1.6     333.0 FIR/y3k1_3/pipe1_reg8/Q_reg[8]/D
+    0:02:29   15022.9      0.04       1.5     333.0 FIR/y3k1_3/pipe1_reg7/Q_reg[8]/D
+    0:02:30   15036.2      0.04       1.5     347.3 FIR/y3k1_3/pipe1_reg0/Q_reg[8]/D
+    0:02:30   15036.7      0.04       1.5     347.3 FIR/y3k1_3/pipe1_reg1/Q_reg[8]/D
+    0:02:31   15037.2      0.03       1.4     347.3 FIR/y3k2_3/pipe1_reg5/Q_reg[8]/D
+    0:02:32   15037.5      0.03       1.4     347.3 FIR/y3k_3/pipe1_reg6/Q_reg[8]/D
+    0:02:33   15041.0      0.03       1.4     347.3 FIR/y3k1_3/pipe1_reg3/Q_reg[8]/D
+    0:02:33   15045.8      0.03       1.3     347.3 FIR/y3k1_3/pipe1_reg1/Q_reg[8]/D
+    0:02:34   15046.3      0.03       1.3     347.3 FIR/y3k1_3/pipe1_reg4/Q_reg[8]/D
+    0:02:34   15051.1      0.03       1.3     347.3 FIR/y3k2_3/pipe1_reg4/Q_reg[8]/D
+    0:02:35   15056.1      0.03       1.3     347.3 FIR/y3k_3/pipe1_reg3/Q_reg[8]/D
+    0:02:35   15059.3      0.03       1.2     347.3 FIR/y3k_3/pipe1_reg6/Q_reg[8]/D
+    0:02:35   15061.5      0.03       1.2     347.3 FIR/y3k_3/pipe1_reg7/Q_reg[8]/D
+    0:02:36   15063.8      0.03       1.2     347.3 FIR/y3k2_3/pipe1_reg0/Q_reg[8]/D
+    0:02:37   15067.3      0.03       1.1     347.3 FIR/y3k1_3/pipe1_reg6/Q_reg[8]/D
+    0:02:38   15072.9      0.03       1.1     347.3 FIR/y3k2_3/pipe1_reg6/Q_reg[8]/D
+    0:02:38   15091.8      0.03       1.1     370.6 FIR/y3k2_3/pipe1_reg3/Q_reg[8]/D
+    0:02:39   15099.5      0.03       1.0     370.6 FIR/y3k1_3/pipe1_reg3/Q_reg[8]/D
+    0:02:39   15110.9      0.03       1.0     373.2 FIR/y3k1_3/pipe1_reg4/Q_reg[8]/D
+    0:02:40   15120.8      0.03       1.0     397.5 FIR/y3k1_3/pipe1_reg7/Q_reg[7]/D
+    0:02:40   15124.2      0.02       1.0     397.5 FIR/y3k1_3/pipe1_reg6/Q_reg[8]/D
+    0:02:41   15129.8      0.02       0.9     397.5 FIR/y3k_3/pipe1_reg1/Q_reg[8]/D
+    0:02:41   15132.2      0.02       0.9     397.5 FIR/y3k1_3/pipe1_reg1/Q_reg[8]/D
+    0:02:42   15137.8      0.02       0.8     397.5 FIR/y3k2_3/pipe1_reg0/Q_reg[8]/D
+    0:02:42   15137.8      0.02       0.8     397.5 FIR/y3k_3/pipe1_reg2/Q_reg[8]/D
+    0:02:43   15141.5      0.02       0.8     397.5 FIR/y3k_3/pipe1_reg4/Q_reg[8]/D
+    0:02:44   15147.1      0.02       0.7     397.5 FIR/y3k_3/pipe1_reg6/Q_reg[8]/D
+    0:02:45   15151.4      0.02       0.7     397.5 FIR/y3k_3/pipe1_reg7/Q_reg[8]/D
+    0:02:46   15161.5      0.02       0.6     397.5 FIR/y3k1_3/pipe1_reg8/Q_reg[8]/D
+    0:02:47   15180.1      0.02       0.6     420.8 FIR/y3k2_3/pipe1_reg8/Q_reg[8]/D
+    0:02:47   15184.1      0.02       0.6     420.8 FIR/y3k2_3/pipe1_reg1/Q_reg[8]/D
+    0:02:48   15185.9      0.02       0.6     420.8 FIR/y3k2_3/pipe1_reg7/Q_reg[8]/D
+    0:02:48   15198.7      0.02       0.6     445.0 FIR/y3k2_3/pipe1_reg6/Q_reg[8]/D
+    0:02:48   15202.4      0.02       0.5     445.0 FIR/y3k_3/pipe1_reg5/Q_reg[8]/D
+    0:02:49   15204.6      0.02       0.5     445.0 FIR/y3k1_3/pipe1_reg8/Q_reg[8]/D
+    0:02:49   15206.4      0.02       0.5     445.0 FIR/y3k2_3/pipe1_reg7/Q_reg[8]/D
+    0:02:50   15209.1      0.02       0.5     445.0 FIR/y3k1_3/pipe1_reg3/Q_reg[8]/D
+    0:02:50   15211.5      0.02       0.5     445.0 FIR/y3k_3/pipe1_reg8/Q_reg[8]/D
+    0:02:50   15212.3      0.01       0.4     445.0 FIR/y3k1_3/pipe1_reg7/Q_reg[8]/D
+    0:02:51   15214.7      0.01       0.4     445.0 FIR/y3k_3/pipe1_reg2/Q_reg[8]/D
+    0:02:51   15220.3      0.01       0.4     445.0 FIR/y3k_3/pipe1_reg1/Q_reg[8]/D
+    0:02:52   15220.3      0.01       0.4     445.0 FIR/y3k2_3/pipe1_reg5/Q_reg[8]/D
+    0:02:52   15225.3      0.01       0.3     445.0 FIR/y3k2_3/pipe1_reg1/Q_reg[8]/D
+    0:02:53   15224.8      0.01       0.3     445.0 FIR/y3k2_3/pipe1_reg7/Q_reg[8]/D
+    0:02:54   15236.2      0.01       0.3     445.0 FIR/y3k2_3/pipe1_reg7/Q_reg[8]/D
+    0:02:55   15237.8      0.01       0.3     445.0 FIR/y3k1_3/pipe1_reg7/Q_reg[8]/D
+    0:02:55   15242.9      0.01       0.2     445.0 FIR/y3k_3/pipe1_reg8/Q_reg[8]/D
+    0:02:56   15245.8      0.01       0.2     445.0 FIR/y3k2_3/pipe1_reg6/Q_reg[8]/D
+    0:02:57   15246.6      0.01       0.2     445.0 FIR/y3k_3/pipe1_reg2/Q_reg[8]/D
+    0:02:57   15251.4      0.01       0.2     445.0 FIR/y3k_3/pipe1_reg4/Q_reg[8]/D
+    0:02:58   15254.0      0.01       0.2     445.0 FIR/y3k2_3/pipe1_reg4/Q_reg[8]/D
+    0:02:58   15254.8      0.01       0.2     445.0 FIR/y3k1_3/pipe1_reg6/Q_reg[8]/D
+    0:02:59   15261.0      0.01       0.1     445.0 FIR/y3k2_3/pipe1_reg4/Q_reg[8]/D
+    0:02:59   15264.1      0.01       0.1     445.0 FIR/y3k1_3/pipe1_reg7/Q_reg[8]/D
+    0:02:59   15263.3      0.01       0.1     445.0 FIR/y3k2_3/pipe1_reg6/Q_reg[8]/D
+    0:03:00   15275.3      0.01       0.1     469.2 FIR/y3k_3/pipe1_reg0/Q_reg[7]/D
+    0:03:00   15280.6      0.01       0.1     469.2 FIR/y3k_3/pipe1_reg0/Q_reg[8]/D
+    0:03:01   15282.8      0.01       0.1     469.2 FIR/y3k1_3/pipe1_reg6/Q_reg[8]/D
+    0:03:02   15286.5      0.01       0.1     469.2 FIR/y3k1_3/pipe1_reg8/Q_reg[8]/D
+    0:03:02   15286.5      0.01       0.1     469.2 FIR/y3k2_3/pipe1_reg4/Q_reg[8]/D
+    0:03:02   15287.6      0.01       0.1     469.2 FIR/y3k1_3/pipe1_reg3/Q_reg[8]/D
+    0:03:03   15288.4      0.01       0.1     469.2 FIR/y3k_3/pipe1_reg2/Q_reg[8]/D
+    0:03:03   15300.1      0.01       0.0     493.5 FIR/y3k1_3/pipe1_reg3/Q_reg[8]/D
+    0:03:03   15306.4      0.00       0.0     493.5 FIR/y3k2_3/pipe1_reg3/Q_reg[8]/D
+    0:03:04   15310.2      0.00       0.0     493.5 FIR/y3k2_3/pipe1_reg4/Q_reg[8]/D
+    0:03:04   15318.9      0.00       0.0     517.7 FIR/y3k_3/pipe1_reg6/Q_reg[8]/D
+    0:03:05   15321.9      0.00       0.0     517.7 FIR/y3k2_3/pipe1_reg3/Q_reg[8]/D
+    0:03:05   15322.7      0.00       0.0     517.7 FIR/y3k1_3/pipe1_reg7/Q_reg[8]/D
+    0:03:05   15326.4      0.00       0.0     517.7 FIR/y3k1_3/pipe1_reg5/Q_reg[8]/D
+    0:03:06   15329.6      0.00       0.0     517.7 FIR/y3k1_3/pipe1_reg1/Q_reg[8]/D
+    0:03:06   15334.4      0.00       0.0     517.7 FIR/y3k1_3/pipe1_reg6/Q_reg[8]/D
+    0:03:06   15337.8      0.00       0.0     517.7 FIR/y3k2_3/pipe1_reg8/Q_reg[8]/D
+    0:03:06   15340.2      0.00       0.0     517.7                          
+    0:03:07   15340.2      0.00       0.0     517.7                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:03:07   15340.2      0.00       0.0     517.7                          
+    0:03:18   15239.4      0.00       0.0     101.5 FIR/y3k2_3/net7706       
+    0:03:19   15239.9      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -81,22 +312,47 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:08    3643.1      0.00       0.0       0.0                          
-    0:00:08    3643.1      0.00       0.0       0.0                          
-    0:00:09    3632.5      0.00       0.0       0.0                          
-    0:00:09    3627.7      0.00       0.0       0.0                          
-    0:00:09    3627.2      0.00       0.0       0.0                          
-    0:00:09    3626.6      0.00       0.0       0.0                          
-    0:00:09    3626.1      0.00       0.0       0.0                          
-    0:00:09    3626.1      0.00       0.0       0.0                          
-    0:00:09    3626.1      0.00       0.0       0.0                          
-    0:00:09    3625.6      0.00       0.0       0.0                          
-    0:00:09    3625.6      0.00       0.0       0.0                          
-    0:00:09    3625.6      0.00       0.0       0.0                          
-    0:00:09    3625.6      0.00       0.0       0.0                          
-    0:00:09    3625.6      0.00       0.0       0.0                          
-    0:00:09    3625.6      0.00       0.0       0.0                          
-    0:00:09    3625.6      0.00       0.0       0.0                          
+    0:03:19   15239.9      0.00       0.0       0.0                          
+    0:03:19   15239.9      0.00       0.0       0.0                          
+    0:03:22   15074.5      0.03       0.3       0.0                          
+    0:03:23   15024.5      0.03       0.3       0.0                          
+    0:03:23   14996.5      0.03       0.3       0.0                          
+    0:03:23   14968.6      0.03       0.3       0.0                          
+    0:03:23   14968.6      0.03       0.3       0.0                          
+    0:03:23   14968.6      0.03       0.3       0.0                          
+    0:03:25   14970.5      0.02       0.2       0.0 FIR/y3k_3/pipe1_reg4/Q_reg[8]/D
+    0:03:25   14973.7      0.02       0.2       0.0 FIR/y3k1_3/pipe1_reg0/Q_reg[8]/D
+    0:03:25   14975.3      0.02       0.2       0.0 FIR/y3k2_3/pipe1_reg4/Q_reg[8]/D
+    0:03:25   14975.8      0.02       0.2       0.0 FIR/y3k2_3/pipe1_reg0/Q_reg[8]/D
+    0:03:26   14979.3      0.02       0.2       0.0 FIR/y3k_3/pipe1_reg2/Q_reg[8]/D
+    0:03:26   14983.2      0.01       0.1       0.0 FIR/y3k2_3/pipe1_reg4/Q_reg[8]/D
+    0:03:27   14987.2      0.01       0.1       0.0 FIR/y3k_3/pipe1_reg4/Q_reg[8]/D
+    0:03:27   14988.0      0.01       0.1       0.0 FIR/y3k1_3/pipe1_reg1/Q_reg[8]/D
+    0:03:28   14990.2      0.01       0.1       0.0 FIR/y3k_3/pipe1_reg4/Q_reg[8]/D
+    0:03:29   14993.1      0.01       0.1       0.0 FIR/y3k1_3/pipe1_reg1/Q_reg[8]/D
+    0:03:30   14993.6      0.01       0.1       0.0 FIR/y3k1_3/pipe1_reg1/Q_reg[8]/D
+    0:03:32   14994.4      0.01       0.1       0.0 FIR/y3k1_3/pipe1_reg1/Q_reg[8]/D
+    0:03:33   14995.2      0.01       0.1       0.0                          
+    0:03:34   14999.5      0.00       0.0       0.0                          
+    0:03:34   15004.0      0.00       0.0       0.0                          
+    0:03:35   15006.4      0.00       0.0       0.0                          
+    0:03:36   15008.5      0.00       0.0       0.0                          
+    0:03:37   15012.0      0.00       0.0       0.0                          
+    0:03:38   15015.7      0.00       0.0       0.0                          
+    0:03:39   15017.3      0.00       0.0       0.0                          
+    0:03:39   15018.9      0.00       0.0       0.0                          
+    0:03:41   15022.4      0.00       0.0       0.0                          
+    0:03:43   14946.8      0.00       0.0       0.0                          
+    0:03:43   14946.8      0.00       0.0       0.0                          
+    0:03:43   14946.8      0.00       0.0       0.0                          
+    0:03:43   14946.8      0.00       0.0       0.0                          
+    0:03:43   14946.8      0.00       0.0       0.0                          
+    0:03:43   14946.8      0.00       0.0       0.0                          
+    0:03:44   14948.7      0.00       0.0       0.0                          
+    0:03:45   14955.6      0.00       0.0       0.0                          
+    0:03:46   14960.4      0.00       0.0       0.0                          
+    0:03:47   14963.6      0.00       0.0       0.0                          
+    0:03:50   14964.4      0.00       0.0       0.0                          
 Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
 
 

@@ -1,9 +1,16 @@
 #!/usr/bin/bash
 analyze -f vhdl -lib WORK ../src/pkg.vhd
+analyze -f vhdl -lib WORK ../src/ADDER.vhd
+analyze -f vhdl -lib WORK ../src/FF.vhd
+analyze -f vhdl -lib WORK ../src/MULTIPLIER.vhd
+analyze -f vhdl -lib WORK ../src/REG.vhd
+analyze -f vhdl -lib WORK ../src/sum_tree.vhd
 analyze -f vhdl -lib WORK ../src/control.vhd
-analyze -f vhdl -lib WORK ../src/reg8.vhd
-analyze -f vhdl -lib WORK ../src/full_FIR.vhd
+analyze -f vhdl -lib WORK ../src/ThreeMult012.vhd
+analyze -f vhdl -lib WORK ../src/ThreeMult123.vhd
 analyze -f vhdl -lib WORK ../src/my_fir.vhd
+analyze -f vhdl -lib WORK ../src/full_FIR.vhd
+
 #Before completing the reading of source we set one parameter to preserve rtl names in the netlist to ease the procedure for power consumption estimation.
 set power_preserve_rtl_hier_names true
 #Launch elaborate command to load the components
@@ -14,7 +21,7 @@ link
 
 #*******  Applying constraints   ***************
 #create 100 Mhz clock
-create_clock -name MY_CLK -period 10 CLK  
+create_clock -name MY_CLK -period 7.08 CLK  
 set_dont_touch_network MY_CLK
 
 #jitter simulation

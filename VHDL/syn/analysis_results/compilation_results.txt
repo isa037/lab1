@@ -9,13 +9,21 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 ============================================================================
 
 
-Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 12 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 
   Beginning Pass 1 Mapping
   ------------------------
+  Processing 'FFN_EN_FP_0'
   Processing 'control'
+  Processing 'REGN_EN_FP_N9_0'
+  Processing 'ADDER_N9_0'
+  Processing 'sum_tree_0'
+  Processing 'MULTIPLIER_N8_M8_K9_0'
+  Processing 'REGN_EN_FP_N8_0'
+  Processing 'THREE_MULT012_0'
+  Processing 'THREE_MULT123_0'
   Processing 'my_fir'
   Processing 'full_FIR'
 
@@ -24,23 +32,57 @@ Information: Updating design information... (UID-85)
 
   Beginning Implementation Selection
   ----------------------------------
-  Processing 'my_fir_DW01_add_0'
-  Processing 'my_fir_DW01_add_1'
-  Processing 'my_fir_DW01_add_2'
-  Processing 'my_fir_DW01_add_3'
-  Processing 'my_fir_DW01_add_4'
-  Processing 'my_fir_DW01_add_5'
-  Processing 'my_fir_DW01_add_6'
-  Processing 'my_fir_DW01_add_7'
-  Mapping 'my_fir_DW_mult_tc_0'
-  Mapping 'my_fir_DW_mult_tc_1'
-  Mapping 'my_fir_DW_mult_tc_2'
-  Mapping 'my_fir_DW_mult_tc_3'
-  Mapping 'my_fir_DW_mult_tc_4'
-  Mapping 'my_fir_DW_mult_tc_5'
-  Mapping 'my_fir_DW_mult_tc_6'
-  Mapping 'my_fir_DW_mult_tc_7'
-  Mapping 'my_fir_DW_mult_tc_8'
+  Processing 'ADDER_N9_1_DW01_add_0'
+  Processing 'ADDER_N9_2_DW01_add_0'
+  Processing 'ADDER_N9_3_DW01_add_0'
+  Processing 'ADDER_N9_4_DW01_add_0'
+  Processing 'ADDER_N9_5_DW01_add_0'
+  Processing 'ADDER_N9_6_DW01_add_0'
+  Processing 'ADDER_N9_7_DW01_add_0'
+  Processing 'ADDER_N9_8_DW01_add_0'
+  Processing 'ADDER_N9_9_DW01_add_0'
+  Processing 'ADDER_N9_10_DW01_add_0'
+  Processing 'ADDER_N9_11_DW01_add_0'
+  Processing 'ADDER_N9_12_DW01_add_0'
+  Processing 'ADDER_N9_13_DW01_add_0'
+  Processing 'ADDER_N9_14_DW01_add_0'
+  Processing 'ADDER_N9_15_DW01_add_0'
+  Processing 'ADDER_N9_16_DW01_add_0'
+  Processing 'ADDER_N9_17_DW01_add_0'
+  Processing 'ADDER_N9_18_DW01_add_0'
+  Processing 'ADDER_N9_19_DW01_add_0'
+  Processing 'ADDER_N9_20_DW01_add_0'
+  Processing 'ADDER_N9_21_DW01_add_0'
+  Processing 'ADDER_N9_22_DW01_add_0'
+  Processing 'ADDER_N9_23_DW01_add_0'
+  Processing 'ADDER_N9_0_DW01_add_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_21_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_12_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_24_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_14_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_2_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_26_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_20_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_17_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_5_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_11_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_8_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_23_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_13_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_1_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_25_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_19_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_16_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_4_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_10_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_7_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_22_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_3_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_15_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_6_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_18_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_9_DW_mult_tc_0'
+  Mapping 'MULTIPLIER_N8_M8_K9_0_DW_mult_tc_0'
 
   Beginning Mapping Optimizations  (Medium effort)
   -------------------------------
@@ -49,19 +91,22 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:07    3170.7      0.00       0.0       0.0                          
-    0:00:07    3170.7      0.00       0.0       0.0                          
-    0:00:07    3170.7      0.00       0.0       0.0                          
-    0:00:07    3170.7      0.00       0.0       0.0                          
-    0:00:07    3170.7      0.00       0.0       0.0                          
-    0:00:08    2987.7      0.00       0.0       0.0                          
-    0:00:08    2987.7      0.00       0.0       0.0                          
-    0:00:08    2987.7      0.00       0.0       0.0                          
-    0:00:08    2987.7      0.00       0.0       0.0                          
-    0:00:08    2987.7      0.00       0.0       0.0                          
-    0:00:08    2987.7      0.00       0.0       0.0                          
-    0:00:08    2987.7      0.00       0.0       0.0                          
-    0:00:08    2987.7      0.00       0.0       0.0                          
+    0:00:41   15133.0      0.00       0.0    1431.4                          
+    0:00:41   15133.0      0.00       0.0    1431.4                          
+    0:00:53   15421.4      0.00       0.0      25.0                          
+    0:00:53   15421.4      0.00       0.0      25.0                          
+    0:00:53   15421.4      0.00       0.0      25.0                          
+    0:00:53   15421.4      0.00       0.0      25.0                          
+    0:00:54   15421.4      0.00       0.0      25.0                          
+    0:01:09   13775.3      0.00       0.0       1.7                          
+    0:01:09   13775.3      0.00       0.0       1.7                          
+    0:01:09   13775.3      0.00       0.0       1.7                          
+    0:01:09   13775.3      0.00       0.0       1.7                          
+    0:01:09   13775.3      0.00       0.0       1.7                          
+    0:01:09   13775.9      0.00       0.0       0.0                          
+    0:01:09   13775.9      0.00       0.0       0.0                          
+    0:01:09   13775.9      0.00       0.0       0.0                          
+    0:01:09   13775.9      0.00       0.0       0.0                          
 
 
 
@@ -72,9 +117,9 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:08    2987.7      0.00       0.0       0.0                          
-    0:00:08    2987.7      0.00       0.0       0.0                          
-    0:00:08    2987.7      0.00       0.0       0.0                          
+    0:01:09   13775.9      0.00       0.0       0.0                          
+    0:01:09   13775.9      0.00       0.0       0.0                          
+    0:01:09   13775.9      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -84,21 +129,22 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:08    2987.7      0.00       0.0       0.0                          
-    0:00:08    2987.7      0.00       0.0       0.0                          
-    0:00:08    2982.4      0.00       0.0       0.0                          
-    0:00:08    2977.3      0.00       0.0       0.0                          
-    0:00:08    2976.8      0.00       0.0       0.0                          
-    0:00:08    2976.3      0.00       0.0       0.0                          
-    0:00:08    2975.7      0.00       0.0       0.0                          
-    0:00:08    2975.7      0.00       0.0       0.0                          
-    0:00:08    2975.7      0.00       0.0       0.0                          
-    0:00:08    2975.7      0.00       0.0       0.0                          
-    0:00:08    2975.7      0.00       0.0       0.0                          
-    0:00:08    2975.7      0.00       0.0       0.0                          
-    0:00:08    2975.7      0.00       0.0       0.0                          
-    0:00:08    2975.7      0.00       0.0       0.0                          
-    0:00:08    2975.7      0.00       0.0       0.0                          
+    0:01:09   13775.9      0.00       0.0       0.0                          
+    0:01:09   13775.9      0.00       0.0       0.0                          
+    0:01:11   13762.6      0.00       0.0       0.0                          
+    0:01:11   13762.0      0.00       0.0       0.0                          
+    0:01:11   13761.5      0.00       0.0       0.0                          
+    0:01:11   13761.0      0.00       0.0       0.0                          
+    0:01:11   13761.0      0.00       0.0       0.0                          
+    0:01:11   13761.0      0.00       0.0       0.0                          
+    0:01:11   13761.0      0.00       0.0       0.0                          
+    0:01:12   13759.4      0.00       0.0       0.0                          
+    0:01:12   13759.4      0.00       0.0       0.0                          
+    0:01:12   13759.4      0.00       0.0       0.0                          
+    0:01:12   13759.4      0.00       0.0       0.0                          
+    0:01:12   13759.4      0.00       0.0       0.0                          
+    0:01:12   13759.4      0.00       0.0       0.0                          
+    0:01:13   13759.4      0.00       0.0       0.0                          
 Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
 
 

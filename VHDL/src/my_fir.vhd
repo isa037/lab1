@@ -116,8 +116,8 @@ begin
 			OUTPUT1=>multout2_6 , OUTPUT2=>multout2_7 , OUTPUT3=>multout2_8);
 			
 	y3k2_3: sum_tree
-		port map (IN0=>multout1_0, IN1=>multout1_1, IN2=>multout1_2, IN3=>multout1_3,
-				IN4=>multout1_4, IN5=>multout1_5, IN6=>multout1_6, IN7=>multout1_7, IN8=>multout1_8, DOUT=>DOUT1, CLK=>CLK, reg_rst=>reg_rst,
+		port map (IN0=>multout2_0, IN1=>multout2_1, IN2=>multout2_2, IN3=>multout2_3,
+				IN4=>multout2_4, IN5=>multout2_5, IN6=>multout2_6, IN7=>multout2_7, IN8=>multout2_8, DOUT=>DOUT2, CLK=>CLK, reg_rst=>reg_rst,
 				EN_OUT=>EN_OUT, EN_IN_REG=>EN_IN_REG);
 
 

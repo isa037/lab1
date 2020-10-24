@@ -4,9 +4,13 @@ module tb_fir ();
 
    wire CLK_i;
    wire RST_n_i;
-   wire [7:0] DIN_i;
+   wire [7:0] DIN0_i;
+   wire [7:0] DIN1_i;
+   wire [7:0] DIN2_i;
    wire VIN_i;
-   wire [7:0] DOUT_i;
+   wire [7:0] DOUT0_i;
+   wire [7:0] DOUT1_i;
+   wire [7:0] DOUT2_i;
    wire VOUT_i;
    wire END_SIM_i;
    wire [7:0] b0_i;
@@ -26,7 +30,9 @@ module tb_fir ();
    tb_input_data_maker DM(	.CLK(CLK_i),
 							.RST_n(RST_n_i),
 							.VOUT(VIN_i),
-							.DOUT(DIN_i),
+							.DOUT0(DIN0_i),
+							.DOUT1(DIN1_i),
+							.DOUT2(DIN2_i),
 							.END_SIM(END_SIM_i),
 							.b0(b0_i),
 							.b1(b1_i),
@@ -41,9 +47,13 @@ module tb_fir ();
 
    full_FIR UUT(.CLK(CLK_i),
 			 .RST_n(RST_n_i),
-			 .DIN(DIN_i),
+			 .DIN0(DIN0_i),
+			 .DIN1(DIN1_i),
+			 .DIN2(DIN2_i),
 			 .VIN(VIN_i),
-			 .DOUT(DOUT_i),
+			 .DOUT0(DOUT0_i),
+			 .DOUT1(DOUT1_i),
+			 .DOUT2(DOUT2_i),
 			 .VOUT(VOUT_i),
 			 .b0(b0_i),
 			.b1(b1_i),
@@ -58,7 +68,9 @@ module tb_fir ();
    tb_output_data_checker DS(.CLK(CLK_i),
 							 .RST_n(RST_n_i),
 							 .VIN(VOUT_i),
-							 .DIN(DOUT_i),
+							 .DIN0(DOUT0_i),
+							 .DIN1(DOUT1_i),
+							 .DIN2(DOUT2_i),
 							.END_SIM(END_SIM_i));   
 
 endmodule

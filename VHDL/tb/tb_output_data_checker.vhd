@@ -13,7 +13,7 @@ entity tb_output_data_checker is
     RST_n : in std_logic;
     VIN   : in std_logic;
 	END_SIM : in std_logic;
-    DIN   : in std_logic_vector(7 downto 0));
+    DIN0, DIN1, DIN2   : in std_logic_vector(7 downto 0));
 end tb_output_data_checker;
 
 architecture beh of tb_output_data_checker is
@@ -30,14 +30,15 @@ begin  -- beh
 	file inputValues_fp : text open READ_MODE is "../../C/samples.txt";
 	file correctOutputValues_fp : text open READ_MODE is "../../C/resultsc.txt";
     variable line_in : line;  
-	variable input, correctOutputValue, filterOutput : integer;
+	variable input0, input1, input2 , correctOutputValue0, correctOutputValue1, correctOutputValue2 , filterOutput0, filterOutput1, filterOutput2 : integer;
+	variable signal_error: integer :=0;
 	-------------------------------------------------------------------
 	variable write_first_line_in_csv : std_logic := '0';
 	   
 
  begin  -- process
 	if write_first_line_in_csv = '0' then 
-		write(line_out, string'("INPUT, OUTPUT, EXPECTED OUTPUT, TEST RESULT"));
+		write(line_out, string'("INPUT0, INPUT1, INPUT2, OUTPUT0, OUTPUT1, OUTPUT2, EXPECTED OUTPUT0, EXPECTED OUTPUT1, EXPECTED OUTPUT2, TEST RESULT0, TEST RESULT1, TEST RESULT3"));
       	writeline(res_fp, line_out);
 		write_first_line_in_csv := '1';
 	end if;
@@ -51,25 +52,63 @@ begin  -- beh
 		--Write INPUT value readed from file
 		if not endfile(inputValues_fp) then
 			readline(inputValues_fp, line_in);
-			read(line_in, input);
+			read(line_in, input0);
+			if not endfile(inputValues_fp) then
+				readline(inputValues_fp, line_in);
+				read(line_in, input1);
+			else
+				input1:=0;
+			end if;
+			if not endfile(inputValues_fp) then
+				readline(inputValues_fp, line_in);
+				read(line_in, input2);
+			else
+				input2:=0;
+			end if;
         end if;
-		write(line_out, input);
+		write(line_out, input0);
+		write(line_out, string'(","));
+		write(line_out, input1);
+		write(line_out, string'(","));
+		write(line_out, input2);
 		write(line_out, string'(","));
 		--Write OUTPUT value obtained by tested circuit
-		filterOutput := conv_integer(signed(DIN));
-        write(line_out, filterOutput);
+		filterOutput0 := conv_integer(signed(DIN0));
+		filterOutput1 := conv_integer(signed(DIN1));
+		filterOutput2 := conv_integer(signed(DIN2));
+        write(line_out, filterOutput0);
+		write(line_out, string'(","));
+        write(line_out, filterOutput1);
+		write(line_out, string'(","));
+        write(line_out, filterOutput2);
 		write(line_out, string'(","));
 		--Write EXPECTED OUTPUT value readed from file
         if not endfile(correctOutputValues_fp) then
 			readline(correctOutputValues_fp, line_in);
-			read(line_in, correctOutputValue);
+			read(line_in, correctOutputValue0);
+			if not endfile(correctOutputValues_fp) then
+				readline(correctOutputValues_fp, line_in);
+				read(line_in, correctOutputValue1);
+			else
+				correctOutputValue1:=0;
+			end if;
+			if not endfile(correctOutputValues_fp) then
+				readline(correctOutputValues_fp, line_in);
+				read(line_in, correctOutputValue2);
+			else
+				correctOutputValue2:=0;
+			end if;
         end if;
-		write(line_out, correctOutputValue);
+		write(line_out, correctOutputValue0);
 		write(line_out, string'(","));
-        
+		write(line_out, correctOutputValue1);
+		write(line_out, string'(","));
+		write(line_out, correctOutputValue2);
+		write(line_out, string'(","));       
 		--Test result an write TEST RESULT
-		if (correctOutputValue /= filterOutput) then
+		if (correctOutputValue0 /= filterOutput0 or correctOutputValue1 /= filterOutput1 or correctOutputValue2 /= filterOutput2) then
           write(line_out, string'("Error"));
+		  signal_error:=1;
         else
           write(line_out, string'("OK"));
 		end if;
@@ -78,8 +117,13 @@ begin  -- beh
     end if;
 
 	if END_SIM = '1' THEN
-		write(line_out, string'("SIMULATION ENDED SUCCESSFULLY"));
-		writeline(res_fp, line_out);
+		if signal_error=0 then
+			write(line_out, string'("SIMULATION ENDED SUCCESSFULLY"));
+			writeline(res_fp, line_out);
+		else
+			write(line_out, string'("ERROR, WRONG RESULT PRODUCED"));
+			writeline(res_fp, line_out);
+		end if;			
 	end if;
   end process;
 end beh;

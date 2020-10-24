@@ -7,14 +7,14 @@ Report : timing
         -max_paths 1
 Design : full_FIR
 Version: O-2018.06-SP4
-Date   : Sat Oct 17 18:04:47 2020
+Date   : Sat Oct 24 11:16:04 2020
 ****************************************
 
 Operating Conditions: typical   Library: NangateOpenCellLibrary
 Wire Load Model Mode: top
 
-  Startpoint: b3[1] (input port clocked by MY_CLK)
-  Endpoint: FIR/DOUT_tmp_reg[7]
+  Startpoint: b0[1] (input port clocked by MY_CLK)
+  Endpoint: FIR/y3k2_3/pipe1_reg6/Q_reg[7]
             (rising edge-triggered flip-flop clocked by MY_CLK)
   Path Group: MY_CLK
   Path Type: max
@@ -28,65 +28,52 @@ Wire Load Model Mode: top
   clock MY_CLK (rise edge)                                0.00       0.00
   clock network delay (ideal)                             0.00       0.00
   input external delay                                    0.50       0.50 f
-  b3[1] (in)                                              0.00       0.50 f
-  FIR/b[3][1] (my_fir)                                    0.00       0.50 f
-  FIR/mult_42_G4/b[1] (my_fir_DW_mult_tc_3)               0.00       0.50 f
-  FIR/mult_42_G4/U174/ZN (INV_X1)                         0.04       0.54 r
-  FIR/mult_42_G4/U189/Z (XOR2_X1)                         0.08       0.63 r
-  FIR/mult_42_G4/U186/ZN (OAI22_X1)                       0.05       0.67 f
-  FIR/mult_42_G4/U37/S (HA_X1)                            0.08       0.75 f
-  FIR/mult_42_G4/U175/ZN (INV_X1)                         0.03       0.78 r
-  FIR/mult_42_G4/U199/ZN (OAI222_X1)                      0.06       0.84 f
-  FIR/mult_42_G4/U198/ZN (AOI222_X1)                      0.10       0.93 r
-  FIR/mult_42_G4/U158/ZN (INV_X1)                         0.03       0.96 f
-  FIR/mult_42_G4/U197/ZN (AOI222_X1)                      0.11       1.07 r
-  FIR/mult_42_G4/U196/ZN (OAI222_X1)                      0.07       1.13 f
-  FIR/mult_42_G4/U9/CO (FA_X1)                            0.10       1.23 f
-  FIR/mult_42_G4/U8/CO (FA_X1)                            0.09       1.32 f
-  FIR/mult_42_G4/U7/CO (FA_X1)                            0.09       1.41 f
-  FIR/mult_42_G4/U6/CO (FA_X1)                            0.09       1.50 f
-  FIR/mult_42_G4/U5/CO (FA_X1)                            0.09       1.59 f
-  FIR/mult_42_G4/U4/CO (FA_X1)                            0.09       1.68 f
-  FIR/mult_42_G4/U3/CO (FA_X1)                            0.09       1.77 f
-  FIR/mult_42_G4/U177/Z (XOR2_X1)                         0.07       1.84 f
-  FIR/mult_42_G4/U176/ZN (XNOR2_X1)                       0.06       1.90 f
-  FIR/mult_42_G4/product[14] (my_fir_DW_mult_tc_3)        0.00       1.90 f
-  FIR/add_7_root_add_0_root_add_56_G7/A[7] (my_fir_DW01_add_3)
-                                                          0.00       1.90 f
-  FIR/add_7_root_add_0_root_add_56_G7/U1_7/S (FA_X1)      0.13       2.03 f
-  FIR/add_7_root_add_0_root_add_56_G7/SUM[7] (my_fir_DW01_add_3)
-                                                          0.00       2.03 f
-  FIR/add_2_root_add_0_root_add_56_G7/B[7] (my_fir_DW01_add_2)
-                                                          0.00       2.03 f
-  FIR/add_2_root_add_0_root_add_56_G7/U1_7/S (FA_X1)      0.15       2.18 r
-  FIR/add_2_root_add_0_root_add_56_G7/SUM[7] (my_fir_DW01_add_2)
-                                                          0.00       2.18 r
-  FIR/add_1_root_add_0_root_add_56_G7/B[7] (my_fir_DW01_add_1)
-                                                          0.00       2.18 r
-  FIR/add_1_root_add_0_root_add_56_G7/U1_7/S (FA_X1)      0.12       2.31 f
-  FIR/add_1_root_add_0_root_add_56_G7/SUM[7] (my_fir_DW01_add_1)
-                                                          0.00       2.31 f
-  FIR/add_0_root_add_0_root_add_56_G7/B[7] (my_fir_DW01_add_0)
-                                                          0.00       2.31 f
-  FIR/add_0_root_add_0_root_add_56_G7/U1_7/S (FA_X1)      0.15       2.45 r
-  FIR/add_0_root_add_0_root_add_56_G7/SUM[7] (my_fir_DW01_add_0)
-                                                          0.00       2.45 r
-  FIR/U35/ZN (NAND2_X1)                                   0.03       2.48 f
-  FIR/U34/ZN (OAI21_X1)                                   0.03       2.51 r
-  FIR/DOUT_tmp_reg[7]/D (DFFR_X1)                         0.01       2.52 r
-  data arrival time                                                  2.52
+  b0[1] (in)                                              0.00       0.50 f
+  FIR/b[0][1] (my_fir)                                    0.00       0.50 f
+  FIR/y3k2_2/C1[1] (THREE_MULT012_1)                      0.00       0.50 f
+  FIR/y3k2_2/MULT1/B[1] (MULTIPLIER_N8_M8_K9_3)           0.00       0.50 f
+  FIR/y3k2_2/MULT1/mult_19/b[1] (MULTIPLIER_N8_M8_K9_3_DW_mult_tc_0)
+                                                          0.00       0.50 f
+  FIR/y3k2_2/MULT1/mult_19/U171/ZN (INV_X1)               0.04       0.54 r
+  FIR/y3k2_2/MULT1/mult_19/U187/Z (XOR2_X1)               0.08       0.63 r
+  FIR/y3k2_2/MULT1/mult_19/U184/ZN (OAI22_X1)             0.05       0.67 f
+  FIR/y3k2_2/MULT1/mult_19/U37/S (HA_X1)                  0.08       0.75 f
+  FIR/y3k2_2/MULT1/mult_19/U169/ZN (INV_X1)               0.03       0.78 r
+  FIR/y3k2_2/MULT1/mult_19/U197/ZN (OAI222_X1)            0.06       0.84 f
+  FIR/y3k2_2/MULT1/mult_19/U196/ZN (AOI222_X1)            0.10       0.94 r
+  FIR/y3k2_2/MULT1/mult_19/U159/ZN (INV_X1)               0.03       0.96 f
+  FIR/y3k2_2/MULT1/mult_19/U195/ZN (AOI222_X1)            0.11       1.07 r
+  FIR/y3k2_2/MULT1/mult_19/U194/ZN (OAI222_X1)            0.07       1.14 f
+  FIR/y3k2_2/MULT1/mult_19/U9/CO (FA_X1)                  0.10       1.23 f
+  FIR/y3k2_2/MULT1/mult_19/U8/CO (FA_X1)                  0.09       1.32 f
+  FIR/y3k2_2/MULT1/mult_19/U7/CO (FA_X1)                  0.09       1.41 f
+  FIR/y3k2_2/MULT1/mult_19/U6/CO (FA_X1)                  0.09       1.50 f
+  FIR/y3k2_2/MULT1/mult_19/U5/CO (FA_X1)                  0.09       1.59 f
+  FIR/y3k2_2/MULT1/mult_19/U4/CO (FA_X1)                  0.09       1.69 f
+  FIR/y3k2_2/MULT1/mult_19/U3/CO (FA_X1)                  0.09       1.78 f
+  FIR/y3k2_2/MULT1/mult_19/U2/S (FA_X1)                   0.13       1.91 r
+  FIR/y3k2_2/MULT1/mult_19/product[14] (MULTIPLIER_N8_M8_K9_3_DW_mult_tc_0)
+                                                          0.00       1.91 r
+  FIR/y3k2_2/MULT1/OUTPUT[7] (MULTIPLIER_N8_M8_K9_3)      0.00       1.91 r
+  FIR/y3k2_2/OUTPUT1[7] (THREE_MULT012_1)                 0.00       1.91 r
+  FIR/y3k2_3/IN6[7] (sum_tree_1)                          0.00       1.91 r
+  FIR/y3k2_3/pipe1_reg6/R[7] (REGN_EN_FP_N9_14)           0.00       1.91 r
+  FIR/y3k2_3/pipe1_reg6/U5/ZN (NAND2_X1)                  0.03       1.93 f
+  FIR/y3k2_3/pipe1_reg6/U4/ZN (OAI21_X1)                  0.03       1.97 r
+  FIR/y3k2_3/pipe1_reg6/Q_reg[7]/D (DFFR_X1)              0.01       1.97 r
+  data arrival time                                                  1.97
 
-  clock MY_CLK (rise edge)                               10.00      10.00
-  clock network delay (ideal)                             0.00      10.00
-  clock uncertainty                                      -0.07       9.93
-  FIR/DOUT_tmp_reg[7]/CK (DFFR_X1)                        0.00       9.93 r
-  library setup time                                     -0.04       9.89
-  data required time                                                 9.89
+  clock MY_CLK (rise edge)                                7.08       7.08
+  clock network delay (ideal)                             0.00       7.08
+  clock uncertainty                                      -0.07       7.01
+  FIR/y3k2_3/pipe1_reg6/Q_reg[7]/CK (DFFR_X1)             0.00       7.01 r
+  library setup time                                     -0.04       6.97
+  data required time                                                 6.97
   --------------------------------------------------------------------------
-  data required time                                                 9.89
-  data arrival time                                                 -2.52
+  data required time                                                 6.97
+  data arrival time                                                 -1.97
   --------------------------------------------------------------------------
-  slack (MET)                                                        7.38
+  slack (MET)                                                        5.00
 
 
 1

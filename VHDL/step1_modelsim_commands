@@ -12,8 +12,8 @@ vcom -93 -work ./work ../src/ThreeMult012.vhd
 vcom -93 -work ./work ../src/ThreeMult123.vhd
 vcom -93 -work ./work ../src/sum_tree.vhd
 vcom -93 -work ./work ../src/control.vhd
-vcom -93 -work ./work ../src/full_FIR.vhd
 vcom -93 -work ./work ../src/my_fir.vhd
+vcom -93 -work ./work ../src/full_FIR.vhd
 
 vcom -93 -work ./work ../tb/clk_gen.vhd
 vcom -93 -work ./work ../tb/tb_output_data_checker.vhd

@@ -14,7 +14,7 @@ entity tb_input_data_maker is
     CLK     : in  std_logic;
     RST_n   : in  std_logic;
     VOUT    : out std_logic;
-    DOUT    : out std_logic_vector(7 downto 0);
+    DOUT0, DOUT1, DOUT2    : out std_logic_vector(7 downto 0);
 	b0,b1,b2,b3,b4,b5,b6,b7,b8		: out std_logic_vector (7 downto 0);
     END_SIM : out std_logic);
 end tb_input_data_maker;
@@ -24,7 +24,7 @@ architecture beh of tb_input_data_maker is
   constant tco : time := 1 ns;
 
   signal sEndSim : std_logic;
-  signal END_SIM_i : std_logic_vector(0 to 10);  
+  signal END_SIM_i : std_logic_vector(0 to 10);
 
 begin  -- beh
 -- Coefficienti {-1, -2, 6, 34, 51, 34, 6, -2, -1}
@@ -45,7 +45,9 @@ begin  -- beh
 	variable counter : INTEGER;
   begin  -- process
     if RST_n = '0' then                 -- asynchronous reset (active low)
-      DOUT <= (others => '0') after tco;      
+      DOUT0 <= (others => '0') after tco;    
+	  DOUT1 <= (others => '0') after tco;
+      DOUT2 <= (others => '0') after tco;  
       VOUT <= '0' after tco;
       sEndSim <= '0' after tco;
 	  counter:=0;
@@ -56,7 +58,21 @@ begin  -- beh
 		  if not endfile(fp_in) then
 			readline(fp_in, line_in);
 			read(line_in, x);
-			DOUT <= conv_std_logic_vector(x, 8) after tco;
+			DOUT0 <= conv_std_logic_vector(x, 8) after tco;
+			if not endfile(fp_in) then
+				readline(fp_in, line_in);
+				read(line_in, x);
+				DOUT1 <= conv_std_logic_vector(x, 8) after tco;
+			else
+				DOUT1 <= conv_std_logic_vector(0, 8) after tco;
+			end if;
+			if not endfile(fp_in) then
+				readline(fp_in, line_in);
+				read(line_in, x);
+				DOUT2 <= conv_std_logic_vector(x, 8) after tco;
+			else
+				DOUT2 <= conv_std_logic_vector(0, 8) after tco;
+			end if;
 			VOUT <= '1' after tco;
 			sEndSim <= '0' after tco;
 		  else

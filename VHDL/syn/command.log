@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Sat Oct 17 18:35:52 2020
+#@ # Date:   Sat Oct 24 11:23:33 2020
 #@ # Run by: isa37@localhost.localdomain
 #@ 
 
@@ -6643,4 +6643,5 @@ read_verilog -netlist ../netlist/myfir.v
 read_saif -input ../saif/myfir_syn.saif -instance tb_fir/UUT -unit ns -scale 1
 #show the clock signal
 create_clock -name MY_CLK CLK
-report_power > power_report_clk10ns.txt
+report_power
+report_power > power_report_sintetizzato_7.08ns.txt

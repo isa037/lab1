@@ -7,52 +7,54 @@ Presto compilation completed successfully.
 Elaborated 1 design.
 Current design is now 'full_FIR'.
 Information: Building the design 'my_fir'. (HDL-193)
-
-Inferred memory devices in process
-	in routine my_fir line 60 in file
-		'../src/my_fir.vhd'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|      x_int_reg      | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine my_fir line 74 in file
-		'../src/my_fir.vhd'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|      x_int_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine my_fir line 85 in file
-		'../src/my_fir.vhd'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|    DOUT_tmp_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
 Presto compilation completed successfully.
 Information: Building the design 'control'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'REGN_EN_FP' instantiated from design 'my_fir' with
+	the parameters "N=8". (HDL-193)
 
 Inferred memory devices in process
-	in routine control line 17 in file
-		'../src/control.vhd'.
+	in routine REGN_EN_FP_N8 line 14 in file
+		'../src/REG.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|  EN_IN_REG_tmp_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        Q_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'THREE_MULT012'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'THREE_MULT123'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'sum_tree'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'FFN_EN_FP'. (HDL-193)
 
 Inferred memory devices in process
-	in routine control line 28 in file
-		'../src/control.vhd'.
+	in routine FFN_EN_FP line 13 in file
+		'../src/FF.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|    VOUT_tmp_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        Q_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'MULTIPLIER' instantiated from design 'THREE_MULT012' with
+	the parameters "N=8,M=8,K=9". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'REGN_EN_FP' instantiated from design 'sum_tree' with
+	the parameters "N=9". (HDL-193)
+
+Inferred memory devices in process
+	in routine REGN_EN_FP_N9 line 14 in file
+		'../src/REG.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        Q_reg        | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'ADDER' instantiated from design 'sum_tree' with
+	the parameters "N=9". (HDL-193)
 Presto compilation completed successfully.
 1
