@@ -20,13 +20,11 @@ architecture behavioural of my_fir is
 	type reg8_type is array(0 to 8) of signed(8 downto 0);
 	type internal_type is array(0 to 8) of signed(7 downto 0);
 	type sum_type is array (0 to 7) of signed(8 downto 0);
-	--type sum_tmp_type is array (0 to 7) of signed(7 downto 0);
 	type mult_type is array (0 to 8) of signed (15 downto 0);
 	signal x_mult_long: mult_type;
 	signal x_int : internal_type;
 	signal x_mult : reg8_type;
 	signal x_sum: sum_type;
-	--signal x_sum_tmp: sum_tmp_type;
 	signal DOUT_tmp : signed(7 downto 0);
 	
 
@@ -77,8 +75,6 @@ begin
 		x_int(0)<= (others=>'0');
 	elsif (clk'event and clk='1') then
 			x_int(0)<=DIN;
-	--else
-	--		x_int(0)<=x_int(0);
 	end if;
 	end process;
 	
