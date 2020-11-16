@@ -4,8 +4,7 @@
 #define NT 9 /// number of coeffs
 #define NB 8 /// number of bits
 
-const int b[NT]={-1, -2, 6, 34, 51, 34, 6, -2, -1}; /// b array
-//const int a[NT-1]={-147, 52}; /// a array IIR
+const int b[NT]={-1, -2, 6, 34, 51, 34, 6, -2, -1}; 
 
 /// Perform fixed point filtering assming direct form I
 ///\param x is the new input sample
@@ -13,7 +12,6 @@ const int b[NT]={-1, -2, 6, 34, 51, 34, 6, -2, -1}; /// b array
 int myfilter(int x)
 {
   static int sx[NT]; /// x shift register
-  static int sy[NT-1]; /// y shift register
   static int first_run = 0; /// for cleaning shift registers
   int i; /// index
   int y; /// output sample
@@ -24,9 +22,7 @@ int myfilter(int x)
     first_run = 1;
     for (i=0; i<NT; i++)
       sx[i] = 0;
-    for (i=0; i<NT-1; i++)
-      sy[i] = 0;
-  }
+     }
 
   /// shift and insert new sample in x shift register
   for (i=NT-1; i>0; i--)
@@ -38,15 +34,6 @@ int myfilter(int x)
   y = 0;
   for (i=0; i<NT; i++)
     y += (sx[i]*b[i]) >> (NB-1) ;	//Butta i bit meno significativi per ridurre la bitwidth
-  /// Auto regressive part  IIR
-  //for (i=0; i<NT-1; i++)
-   // y -= (sy[i]*a[i]) >> (NB-1);
-
-  /// update the y shift register
-  for (i=NT-2; i>0; i--)
-    sy[i] = sy[i-1];
-  sy[0] = y;
- 
   return y;
 }
 
@@ -86,5 +73,4 @@ int main (int argc, char **argv)
   fclose(fp_out);
 
   return 0;
-
 }

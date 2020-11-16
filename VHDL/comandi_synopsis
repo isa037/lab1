@@ -3,6 +3,9 @@ cd /home/isa37/Documents/lab1/VHDL/syn/
 rm -r work
 mkdir work
 mkdir analysis_results
+source /software/scripts/init_synopsys_64.18
+#lancia synopsis
+dc_shell-xg-t
 #*******Reading VHDL source files**************
 analyze -f vhdl -lib WORK ../src/pkg.vhd
 analyze -f vhdl -lib WORK ../src/control.vhd
@@ -19,7 +22,7 @@ link
 
 #*******  Applying constraints   ***************
 #create 100 Mhz clock
-create_clock -name MY_CLK -period 8 CLK  
+create_clock -name MY_CLK -period 7.08 CLK  
 set_dont_touch_network MY_CLK
 
 #jitter simulation
